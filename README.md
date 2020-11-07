@@ -42,7 +42,6 @@ templating
 
 {% endmacro %}
 
-
 #data
 Данные описываются в виде JSON { "items": [{"a": "some_val"}, {"a": "some_val"}] };
 
