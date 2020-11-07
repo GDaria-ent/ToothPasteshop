@@ -1,0 +1,14 @@
+<head>
+    <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+    <script>
+        !function(t,e){"function"==typeof define&&define.amd?define(e):"object"==typeof exports?module.exports=e():t.ActionController=e()}(this,function(){"use strict";function t(t,e){this.currentElement=null,this.actions=e||{},this.attr=t,this.events=["click","input","change"],this.checkers={},this.checker=this.checker.bind(this),this.init()}return t.prototype.$attr=function(t){return this.el.getAttribute(t)},t.prototype.$val=function(){return this.event.target.value},t.prototype.checkElement=function(t){return t.getAttribute(this.attr)?{link:t,name:t.getAttribute(this.attr)}:{link:t.closest("["+this.attr+"]"),name:t.closest("["+this.attr+"]")?t.closest("["+this.attr+"]").getAttribute(this.attr):null}},t.prototype.add=function(t){for(var e in t)t.hasOwnProperty(e)&&(this.actions[e]=t[e],this.actions[e].$attr=this.$attr.bind(this.actions[e]),this.actions[e].$val=this.$val.bind(this.actions[e]))},t.prototype.checker=function(t){var e=this,n=t||"click";return function(t){e.currentElement;var i=e.currentElement=e.checkElement(t.target),r=e.actions[i.name];if(!i||!r||(r.type||"click")!==n)return!1;r.event=t,r.el=i.link,r.name=i.name,r.action({event:t,el:i.link,name:i.name})}},t.prototype.setListeners=function(){var t=this;t.events.forEach(function(e){var n=t.checker(e);t.checkers[e+"controller"]={listener:n,event:e},document.addEventListener(e,t.checkers[e+"controller"].listener)})},t.prototype.removetListeners=function(){if(!this.checkers.length)return!1;this.checkers.forEach(function(t){document.addEventListener(t.event,t.listener)})},t.prototype.init=function(){this.removetListeners(),this.setListeners()},t});
+        var $controller$ = new ActionController('data-controller');
+    </script>
+    
+    {% block style %} {% endblock %}
+    <link rel="stylesheet" href="./css/main.css">
+</head>
