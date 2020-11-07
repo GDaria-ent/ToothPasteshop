@@ -1,0 +1,37 @@
+{
+  "name": "tst",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "start",
+    "gulp": "gulp.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^4.0.1",
+    "gulp-cssbeautify": "^1.0.1",
+    "gulp-data": "^1.3.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-js-import": "^1.0.6",
+    "gulp-minify": "^3.1.0",
+    "gulp-nunjucks": "^5.0.0",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglifycss": "^1.1.0",
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {
+    "gulp-css": "^0.1.0",
+    "gulp-rename": "^1.4.0",
+    "require-dir": "^1.2.0"
+  }
+}

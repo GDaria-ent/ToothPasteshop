@@ -1,0 +1,107 @@
+=tran($val:0.3, $e: ease)
+    transition: #{$val}s $e
+
+=npm
+    padding: 0
+    margin: 0
+
+=cent
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+
+@function resptext ($from, $to, $min, $max)
+    @return calc(#{$to}px + (#{$from} - #{$to}) * (100vw - #{$min}px) / (#{$max} - #{$min}) )
+
+=qmax($width)
+    @media screen and (max-width: #{$width}px)
+        @content
+=qmin($width)
+    @media screen and (min-width: #{$width}px)
+        @content
+=qhmax($height)
+    @media screen and (max-height: #{$height}px)
+        @content
+=qhmin($height)
+    @media screen and (min-height: #{$height}px)
+        @content
+=qminwminh($width, $height)
+    @media (min-width: #{$width}px) and (max-height: #{$height}px)
+        @content
+=qmaxwminh($width, $height)
+    @media (max-width: #{$width}px) and (max-height: #{$height}px)
+        @content
+
+=btn($bgcolor: blue, $color: #fff, $tran: 0.3, $easing: ease)
+    cursor: pointer
+    background-color: $bgcolor
+    color: $color
+    +tran(#{$tran}, #{$easing})
+    &:hover
+        background-color: rgba($bgcolor, 0.8)
+        color: $color
+    &:active
+        background-color: rgba($bgcolor, 0.8)
+        color: $color
+    &:focus
+        background-color: rgba($bgcolor, 0.8)
+        color: $color
+=btn_is_active($bgcolor, $color)
+    cursor: pointer
+    &:hover
+        background-color: $bgcolor
+        color: $color
+    &:active
+        background-color: $bgcolor
+        color: $color
+    &:focus
+        background-color: $bgcolor
+        color: $color
+=posa
+    position: absolute
+
+=dark-plug
+    opacity: 1
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 1
+    background-color: rgba(0,0,0,0.09)
+
+=card-scale
+    transform: scale(1.02)
+
+=placeholder
+    &.placeholder
+        @content
+    &:-moz-placeholder
+        @content
+    &::-moz-placeholder
+        @content
+    &:-ms-input-placeholder
+        @content
+    &::-webkit-input-placeholder
+        @content
+
+// -- size
+
+=oo
+    font-size: 11px
+    line-height: 15px
+=of
+    font-size: 14px
+    line-height: 19px
+=ow
+    font-size: 18px
+    line-height: 25px
+=ff
+    font-size: 22px
+    line-height: 30px
+=tw
+    font-size: 28px
+    line-height: 38px
+=tf
+    font-size: 34px
+    line-height: 46px
