@@ -1,21 +1,19 @@
-Gulp:
-gulp dev
+#Gulp:
+##gulp dev
 
-templating
+###templating
 В html/templates/ -- основа для страницы
 В html/templates/macros, html/templates/partials -- куски переиспользуемого кода
 В html/templates/pages -- страницы
 
-#html/templates/pages
+###html/templates/pages
 
 % set title = '100-TOKENS-BANNER' %}  подключаем заголовок
 
 {% extends "base.nunjucks" %}  подключаем основу для страницы
 
 {% block style %}              если в base есть блок style
-    <!-- <link rel="stylesheet" href="./css/redesign.css">
-    <link rel="stylesheet" href="./../../../dist/css/new-gateway.css">
-    <link rel="stylesheet" href="./css/present-tokens-component.css"> -->
+   
 {% endblock %}
 
 {% block content %}  основной контент
@@ -42,10 +40,10 @@ templating
 
 {% endmacro %}
 
-#data
+###data
 Данные описываются в виде JSON { "items": [{"a": "some_val"}, {"a": "some_val"}] };
 
 В #html/templates/partials/* Можно получить доступ через {% set items = items %}
 
-#sass
+###sass
 Файлы в корне без _ в начале имени файла, компилируются в dist похдватывая то что заимпортировано в них
