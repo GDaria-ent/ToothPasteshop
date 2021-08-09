@@ -70,63 +70,63 @@ listOfCards = [
         title: 'Fresh Mint',
         description: 'Toothpaste Bits',
         price: 30,
-        image: '/assets/Product1.png',
+        image: '/ToothPasteshop/assets/Product1.png',
         counter: 1
     },
     {
         title: 'Charcoal Mint',
         description: 'Toothpaste Bits',
         price: 30,
-        image: '/assets/Charcoal-Subscription.jpg',
+        image: '/ToothPasteshop/assets/Charcoal-Subscription.jpg',
         counter: 1
     },
     {
         title: 'Berry Twist',
         description: 'Toothpaste Bits',
         price: 30,
-        image: '/assets/Berry-Subscription.jpg',
+        image: '/ToothPasteshop/assets/Berry-Subscription.jpg',
         counter: 1
     },
     {
         title: 'Mouthwash Bits',
         description: '4-Mounth supply',
         price: 20,
-        image: '/assets/Product2.png',
+        image: '/ToothPasteshop/assets/Product2.png',
         counter: 1
     },
     {
         title: 'Whitening Gel',
         description: '28 applications',
         price: 24,
-        image: '/assets/Product3.png',
+        image: '/ToothPasteshop/assets/Product3.png',
         counter: 1
     },
     {
         title: 'Dental Floss',
         description: 'Two-pack',
         price: 12,
-        image: '/assets/Product4.png',
+        image: '/ToothPasteshop/assets/Product4.png',
         counter: 1
     },
     {
         title: 'Pamboo Toothbush',
         description: 'Two-pack',
         price: 12,
-        image: '/assets/Product5.png',
+        image: '/ToothPasteshop/assets/Product5.png',
         counter: 1
     },
     {
         title: 'Daily Habits Kit',
         description: '5-Piece Oral Care Set',
         price: 60,
-        image: '/assets/Product6.png',
+        image: '/ToothPasteshop/assets/Product6.png',
         counter: 1
     },
     {
         title: 'The Duo',
         description: 'Toothpaste',
         price: 20,
-        image: '/assets/Slider2.png',
+        image: '/ToothPasteshop/assets/Slider2.png',
         counter: 1
     }
 ];
@@ -237,7 +237,7 @@ app.component('basket-item', {
     props: {
         src: {
             type: String,
-            default: '/assets/Product1.png'
+            default: '/ToothPasteshop/assets/Product1.png'
         },
         title: {
             type: String,

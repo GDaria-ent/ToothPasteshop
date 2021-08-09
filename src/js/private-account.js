@@ -38,7 +38,7 @@ application.component('basket-card', {
     props: {
         src: {
             type: String,
-            default: '/assets/Product1.png'
+            default: '/ToothPasteshop/assets/Product1.png'
         },
         title: {
             type: String,
