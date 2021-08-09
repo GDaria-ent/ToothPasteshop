@@ -22,42 +22,42 @@
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide swiper-slide--action">
-                        <img class='slide-img' src='/ToothPasteshop/assets/Slider1.png'>
+                        <img class='slide-img' src='/ToothPasteshop/assets/Slider1.png' alt='Totthpaste Bits'>
                         <div class='description-wrapper'>
                             <p class='slide-name'>Toothpaste Bits</p>
                             <p class='slide-description'>From $7.50 / month</p>
                         </div>  
                     </div>
                     <div class="swiper-slide swiper-slide--action">
-                        <img class='slide-img' src='/ToothPasteshop/assets/Slider2.png'>
+                        <img class='slide-img' src='/ToothPasteshop/assets/Slider2.png' alt='Mouthwash Bits'>
                         <div class='description-wrapper'>
                             <p class='slide-name'>Mouthwash Bits</p>
                             <p class='slide-description'>From $5.00 / month</p>
                         </div>
                     </div>
                     <div class="swiper-slide swiper-slide--action">
-                        <img class='slide-img' src='/ToothPasteshop/assets/Slider3.png'>
+                        <img class='slide-img' src='/ToothPasteshop/assets/Slider3.png' alt='Whitening Gel'>
                         <div class='description-wrapper'>
                             <p class='slide-name'>Whitening Gel</p>
                             <p class='slide-description'>From $5.00 / month</p>
                         </div>
                     </div>
                     <div class="swiper-slide swiper-slide--action">
-                        <img class='slide-img' src='/ToothPasteshop/assets/Slider1.png'>
+                        <img class='slide-img' src='/ToothPasteshop/assets/Slider1.png' alt='Totthpaste Bits'>
                         <div class='description-wrapper'>
                             <p class='slide-name'>Toothpaste Bits</p>
                             <p class='slide-description'>From $7.50 / month</p>
                         </div>  
                     </div>
                     <div class="swiper-slide swiper-slide--action">
-                        <img class='slide-img' src='/ToothPasteshop/assets/Slider2.png'>
+                        <img class='slide-img' src='/ToothPasteshop/assets/Slider2.png' alt='Mouthwash Bits'>
                         <div class='description-wrapper'>
                             <p class='slide-name'>Mouthwash Bits</p>
                             <p class='slide-description'>From $5.00 / month</p>
                         </div>
                     </div>
                     <div class="swiper-slide swiper-slide--action">
-                        <img class='slide-img' src='/ToothPasteshop/assets/Slider3.png'>
+                        <img class='slide-img' src='/ToothPasteshop/assets/Slider3.png' alt='Whitening Gel'>
                         <div class='description-wrapper'>
                             <p class='slide-name'>Whitening Gel</p>
                             <p class='slide-description'>From $5.00 / month</p>
