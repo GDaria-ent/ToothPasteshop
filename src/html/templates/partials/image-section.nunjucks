@@ -49,7 +49,7 @@
         'stars': '/ToothPasteshop/assets/stars.png'
     },
     {
-        "sourse": '/assets/Product5.png',
+        "sourse": '/ToothPasteshop/assets/Product5.png',
         "alt": 'Bamboo toothbrush',
         'name': 'Bamboo Toothbrush',
         'description': 'Two-pack',
