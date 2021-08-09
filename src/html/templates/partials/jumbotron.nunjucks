@@ -1,42 +1,42 @@
 {% set images = [
     {
-        "sourse": '/assets/img_1.png',
+        "sourse": '/ToothPasteshop/assets/img_1.png',
         "alt": 'As Seen On logo'
     },
     {
-        'sourse': '/assets/img_2.png',
+        'sourse': '/ToothPasteshop/assets/img_2.png',
         'alt': 'Forbes logo'
     },
     {
-        'sourse': '/assets/img_3.png',
+        'sourse': '/ToothPasteshop/assets/img_3.png',
         'alt': 'Oprah Magazine logo'
     },
     {
-        'sourse': '/assets/img_4.png',
+        'sourse': '/ToothPasteshop/assets/img_4.png',
         'alt': 'Cosmopolitan logo'
     },
     {
-        'sourse': '/assets/img_5.png',
+        'sourse': '/ToothPasteshop/assets/img_5.png',
         'alt': 'People logo'
     },
     {
-        'sourse': '/assets/img_6.png',
+        'sourse': '/ToothPasteshop/assets/img_6.png',
         'alt': 'Buzz Feed logo'
     },
     {
-        'sourse': '/assets/img_7.png',
+        'sourse': '/ToothPasteshop/assets/img_7.png',
         'alt': 'Womens Health logo'
     },
     {
-        'sourse': '/assets/img_8.png',
+        'sourse': '/ToothPasteshop/assets/img_8.png',
         'alt': 'Now This logo'
     },
     {
-        'sourse': '/assets/img_9.png',
+        'sourse': '/ToothPasteshop/assets/img_9.png',
         'alt': 'Insider logo'
     },
     {
-        'sourse': '/assets/img_10.png',
+        'sourse': '/ToothPasteshop/assets/img_10.png',
         'alt': 'Country Living logo'
     }
 ] %}
