@@ -1,0 +1,29 @@
+{% extends "base.nunjucks" %}
+
+{% set title = 'Test Page' %}
+
+
+{% block content %}
+         {% include '../templates/partials/header.nunjucks' %}
+         {% include '../templates/partials/jumbotron.nunjucks' %}
+         <div class='content-part'>
+            {% include '../templates/partials/page-description.nunjucks' %}
+            {% include '../templates/partials/video-section.nunjucks' %}
+            {% include '../templates/partials/animation-section.nunjucks' %}
+            {% include '../templates/partials/gif-section.nunjucks' %}
+            {% include '../templates/partials/image-section.nunjucks' %}
+            {% include '../templates/partials/subscription-section.nunjucks' %}
+            {% include '../templates/partials/pre-footer.nunjucks' %}
+         </div>
+         {% include '../templates/partials/footer.nunjucks' %}
+         {% include '../templates/partials/_modal-sign-in.nunjucks' %}
+         {% include '../templates/partials/main-menu.nunjucks' %}
+         {% include '../templates/partials/video-modal.nunjucks' %}
+         {% include '../templates/partials/create-account.nunjucks' %}
+         {% include '../templates/partials/_modal-cart.nunjucks' %}
+{% endblock %}
+
+{% block script %}
+   <script src="./js/modals.js"></script>
+   <script src="./js/image-section.js"></script>
+{% endblock%}

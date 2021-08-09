@@ -1,0 +1,48 @@
+.menu-modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 99;
+    backdrop-filter: blur(5px);
+    padding: 60px 10px;
+    opacity: 0;
+    transition: 0.3s ease-in;
+    pointer-events: none;
+}
+
+.menu-modal--visible{
+    opacity: 1;
+    pointer-events: auto;
+}  
+
+.menu-modal__wrapper{
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.582);
+    margin: 0 auto;
+    border-radius: 7px;
+    padding: 40px 5px;
+}
+.menu-modal__item{
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.menu-modal__item-link{
+    color: $violet;
+}
+.menu-modal__close-button{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}

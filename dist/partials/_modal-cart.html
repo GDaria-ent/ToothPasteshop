@@ -1,0 +1,92 @@
+<template id='page-card'>
+    <div class='product-item__container'>
+        <div class='product-item__image-wrapper'>
+            <img class='product-item__image' :src='src'>
+        </div>
+        <div class='product-item__card-content'>
+            <div class='product-item__card-content__wrapper'>
+                <h3 class='product-item__card-title'>${title}$</h3>
+                <p class='product-item__card-description'>${description}$</p>
+                <p class='product-item__card-price'>$${price}$</p>
+            </div>
+            <button class='product-item__button'
+                    @click='addCard'
+            >Add</button>        
+        </div>
+    </div>
+</template>
+
+<template id='item-in-cart'>
+    <div class='basket-item__wrapper'>
+        <button class='basket-item__close-button' @click='deleteItem'>
+            <svg class='basket-item__close-button__svg' viewBox="0 0 19 19" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.75 2.27861C18.8177 2.34439 18.8715 2.42314 18.9082 2.51016C18.945 2.59719 18.9639 2.69073 18.9639 2.78524C18.9639 2.87974 18.945 2.97328 18.9082 3.06031C18.8715 3.14734 18.8177 3.22608 18.75 3.29186L13.1192 9.0457C13.0516 9.11148 12.9977 9.19022 12.961 9.27725C12.9243 9.36428 12.9053 9.45782 12.9053 9.55232C12.9053 9.64683 12.9243 9.74037 12.961 9.8274C12.9977 9.91442 13.0516 9.99317 13.1192 10.0589L18.7861 15.7404C18.8538 15.8062 18.9076 15.8849 18.9443 15.972C18.9811 16.059 19 16.1525 19 16.247C19 16.3415 18.9811 16.4351 18.9443 16.5221C18.9076 16.6091 18.8538 16.6879 18.7861 16.7537L16.7287 18.7983C16.5887 18.928 16.405 19 16.2143 19C16.0237 19 15.84 18.928 15.7 18.7983L9.99703 13.1349C9.92986 13.0665 9.84979 13.0122 9.76149 12.9751C9.67319 12.9381 9.57841 12.919 9.48268 12.919C9.38695 12.919 9.29218 12.9381 9.20387 12.9751C9.11557 13.0122 9.0355 13.0665 8.96833 13.1349L3.30146 18.7802C3.16142 18.9099 2.97776 18.9819 2.78711 18.9819C2.59646 18.9819 2.4128 18.9099 2.27276 18.7802L0.215361 16.7537C0.147153 16.6863 0.0929863 16.606 0.0560134 16.5175C0.0190405 16.429 0 16.334 0 16.238C0 16.142 0.0190405 16.047 0.0560134 15.9585C0.0929863 15.8699 0.147153 15.7897 0.215361 15.7223L5.90028 10.0228C5.96849 9.95542 6.02266 9.87514 6.05963 9.78661C6.0966 9.69808 6.11564 9.60307 6.11564 9.50709C6.11564 9.41111 6.0966 9.31609 6.05963 9.22756C6.02266 9.13903 5.96849 9.05876 5.90028 8.99141L0.215361 3.30996C0.147153 3.24261 0.0929863 3.16234 0.0560134 3.07381C0.0190405 2.98528 0 2.89026 0 2.79428C0 2.69831 0.0190405 2.60329 0.0560134 2.51476C0.0929863 2.42623 0.147153 2.34595 0.215361 2.27861L2.29081 0.215916C2.35798 0.147532 2.43805 0.0932256 2.52635 0.0561576C2.61465 0.0190895 2.70943 0 2.80516 0C2.90089 0 2.99566 0.0190895 3.08397 0.0561576C3.17227 0.0932256 3.25234 0.147532 3.31951 0.215916L9.02247 5.89737C9.16252 6.02708 9.34617 6.09911 9.53682 6.09911C9.72748 6.09911 9.91113 6.02708 10.0512 5.89737L15.6639 0.234009C15.7311 0.165626 15.8111 0.111319 15.8994 0.0742514C15.9877 0.0371834 16.0825 0.0180938 16.1783 0.0180938C16.274 0.0180938 16.3688 0.0371834 16.4571 0.0742514C16.5454 0.111319 16.6254 0.165626 16.6926 0.234009L18.75 2.27861Z" fill="currentColor"></path>
+            </svg>
+        </button>
+        <div class='product-item__container'>
+            <div class='product-item__image-wrapper'>
+                <img class='product-item__image' :src='src'>
+            </div>
+            <div class='product-item__card-content product-item__card-content--basket'>
+                <div class='product-item__card-content__wrapper'>
+                    <h3 class='product-item__card-title'>${title}$</h3>
+                    <p class='product-item__card-description'>${description}$</p>
+                    <div class='basket-item__amount-button__wrapper'>
+                        <button class='basket-item__amount-button' @click='minusOneItem'>-</button>
+                        <div class='basket-item__counter'>${counter}$</div>
+                        <button class='basket-item__amount-button' @click='plusOneItem'>+</button>
+                    </div>
+                </div>
+                <div class='basket-item__total-price'>$${totalPrice}$</div>
+            </div>
+        </div>
+    </div>
+</template>
+
+
+<div class='cart' id='shopping-cart'>
+    <div class='cart__wrapper'>
+        <button class='cart__close-button'>
+            <svg class='close-button__svg' viewBox="0 0 256 512" fill='currentColor'>
+                <path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+            </svg>
+        My cart</button>
+        <div class='cart__content-part' id='app-wrapper'>
+            <h2 class='content-part__title'
+                v-if='ifCartIsEmpty'
+            >Your cart</h2>
+            <p class='content-part__description'
+                v-if='ifCartIsEmpty'
+            >Your cart is empty, give it some love!</p>
+            <button class='content-part__button'
+                    @click='openSignInWindow'
+                    v-if='!ifCartIsEmpty'>Check your order in Your Account!
+            </button>
+            <div class='basket__wrapper'>
+                <basket-item
+                    v-for='item in productsInCart'
+                    :key="item.title"
+                    :title="item.title"
+                    :description="item.description"
+                    :price='item.price'
+                    :src='item.image'
+                    :counter='item.counter'
+                    @click-to-delete='removeItemFormList(item)'
+                    @decrement-counter='deleteItem(item)'
+                    @increment-counter='addItem(item)'
+                ></basket-item>
+            </div>
+            <div class='content-part__card-wrapper'>
+                <card-item 
+                    v-for="product in products"
+                    :key="product.title"
+                    :title="product.title"
+                    :description="product.description"
+                    :price='product.price'
+                    :src='product.image'
+                    @add-card-to-local-storage='addItemToLocalStorage(product)'
+                ></card-item>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,36 +1,4 @@
-=tran($val:0.3, $e: ease)
-    transition: #{$val}s $e
 
-=npm
-    padding: 0
-    margin: 0
-
-=cent
-    left: 50%
-    top: 50%
-    transform: translate(-50%, -50%)
-
-@function resptext ($from, $to, $min, $max)
-    @return calc(#{$to}px + (#{$from} - #{$to}) * (100vw - #{$min}px) / (#{$max} - #{$min}) )
-
-=qmax($width)
-    @media screen and (max-width: #{$width}px)
-        @content
-=qmin($width)
-    @media screen and (min-width: #{$width}px)
-        @content
-=qhmax($height)
-    @media screen and (max-height: #{$height}px)
-        @content
-=qhmin($height)
-    @media screen and (min-height: #{$height}px)
-        @content
-=qminwminh($width, $height)
-    @media (min-width: #{$width}px) and (max-height: #{$height}px)
-        @content
-=qmaxwminh($width, $height)
-    @media (max-width: #{$width}px) and (max-height: #{$height}px)
-        @content
 
 =btn($bgcolor: blue, $color: #fff, $tran: 0.3, $easing: ease)
     cursor: pointer

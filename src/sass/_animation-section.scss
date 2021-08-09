@@ -1,0 +1,88 @@
+
+
+.animation-section_wrapper{
+    margin-top: 60px;
+    background-color: #cff5f6;
+    border-radius: 20px;
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    padding-top: 80px;
+    overflow: hidden;
+    
+}
+
+.animation-section_description-container{
+    max-width: 600px;
+    width: 100%;
+    transform: translateY(75px);
+    opacity: 0;
+    z-index: 1;
+    margin: 0 auto;
+    position: relative;
+}
+
+.animation-section_name{
+    color: #172345;
+    font-size: 61px;
+    line-height: 70px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.animation-section_description{
+    color: #172345;
+    font-size: 31px;
+    line-height: 41px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+.additional{
+    width: 400px;
+    height: 1000px;
+}
+
+.animated-image-container{
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    position: relative;
+    z-index: 0;
+}
+
+.animated-image{
+    width: 200px;
+    display: block;
+    position: absolute;
+}
+.animated-bottle--first{
+    top: -140%;
+    left: 5%;
+}
+.animated-bottle--second{
+    bottom: 50%;
+    left: 50%;
+}
+.animated-bottle--third{
+    bottom: -20%;
+    right: 4%;
+}
+
+.animated-bottle--fourth{
+    top: 210%;
+    right: 40%;
+}
+.animated-pill--first{
+    width: 50px;
+    right: 30%;
+}
+.animated-pill--second{
+    width: 40px;
+    left: 10%;
+}
+.animated-pill--third{
+    width: 30px;
+    left: 45%;
+    top: -20%;
+}

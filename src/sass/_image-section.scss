@@ -1,0 +1,122 @@
+.image-section-container{
+    margin-top: 60px;
+    width: 100%;
+}
+.product-cards__container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-card__image-wrapper{
+    position: relative;
+    width: 100%;
+    padding-top: 130%;
+    overflow: hidden;
+}
+.product-card__image{
+    width: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    display: block;
+}
+.product-card__image1--invisible{
+    display: none;
+}
+.product-card__image2{
+    display: none;
+}
+.product-card__image2--visible{
+    display: block;
+}
+
+.product-card__image3{
+    display: none;
+}
+
+.product-card__image3--visible{
+    display: block;
+}
+
+
+.product-card__wrapper{
+    margin-bottom: 10px;
+    max-width: calc((100% - 25px)/3);
+    width: 100%;
+}
+
+.product-card__wrapper:hover{
+    box-shadow: 1px 1px  3px 4px #aeb7ec;
+}
+
+.product-card__description-header,
+.product-card__content{
+    display: flex;
+    justify-content: space-between;
+    color: $navy;
+}
+.product-card__title,
+.product-card__header-price{
+    margin: 0;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 21px;
+}
+.product-card__content-description{
+    color: $inactive;
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 16px;
+}
+.product-card__content-price{
+    font-size: 16px;
+    line-height: 16px;
+    margin-top: 5px;
+}
+.product-card__info > p{
+    display: inline-block;
+    font-size: 12px;
+    line-height: 20px;
+    margin-right: 23px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.product-card__select-img{
+    width: 22px;
+    height: 22px;
+}
+.product-card__select-colors{
+    padding: 0;
+}
+.product-card__footer-image{
+    width: 72px;
+}
+.product-card__wrapper-footer{
+    max-width: calc((100% - 55px)/ 4);
+    width: 100%;
+}
+
+.product-card__wrapper-footer:hover{
+    box-shadow: 1px 1px  3px 4px #aeb7ec;
+}
+.product-card__image-wrapper-footer{
+    position: relative;
+    width: 100%;
+    padding-top: 66.7%;
+    overflow: hidden;
+}
+.product-card__image-footer{
+    width: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+.product-cards__footer-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

@@ -1,0 +1,50 @@
+.jumbotron{
+    max-width: 1440px;
+    width: 100%;
+    background-image: url(/assets/Rectangle.jpg);
+    margin: 0 auto;
+    // padding: 169px 181px 235px 181px;
+    padding: 169px 0 181px 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.jumbotron-content-wrapper{
+    // max-width: 1078px;
+    width: 100%;
+    margin: 0 auto;
+    color: $white;
+    text-align: center;
+}
+
+h1{
+    font-size: 61px;
+    letter-spacing: 4px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.jumbotron-description{
+    font-size: 29px;
+    line-height: 41px;
+    text-align: center;
+}
+
+.jumbotron-footer{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: $grey;
+    padding: 25px 5px 28px 5px;
+}
+
+.jumbotron-footer__image-wrapper{
+    width: 120px;
+    text-align: center;
+}
+.jumbotron-footer__image{
+    max-height: 30px;
+}

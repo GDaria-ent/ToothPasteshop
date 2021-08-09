@@ -1,0 +1,43 @@
+<template id='item-in-basket'>
+    <div class='basket-item__wrapper'>
+        <div class='product-item__container'>
+            <div class='product-item__image-wrapper'>
+                <img class='product-item__image' :src='src'>
+            </div>
+            <div class='product-item__card-content product-item__card-content--basket'>
+                <div class='product-item__card-content__wrapper'>
+                    <h3 class='product-item__card-title'>${title}$</h3>
+                    <p class='product-item__card-description'>${description}$</p>
+                    <div class='basket-item__amount-button__wrapper'>
+                        <div class='basket-item__counter'>${counter}$</div>
+                    </div>
+                </div>
+                <div class='basket-item__total-price'>$${total}$</div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<div class='main-part' id='application-wrapper'>
+    <h1 class='main-part__title'>your orders</h1>
+    <div class='main-part__orders-container'>
+        <p class='main-part__orders-description'
+            v-if='ifCartIsEmpty'
+        >no orders yet...</p>
+        <basket-card
+            v-for='order in orderList'
+            :key='order.title'
+            :title="order.title"
+            :description="order.description"
+            :price='order.price'
+            :src='order.image'
+            :counter='order.counter'
+            @click-delete='removeItemFormProductList(order)'
+        ></basket-card>
+    </div>
+    <div class='main-part__orders__total-price' v-if='!ifCartIsEmpty'>
+        <p class='total-price__amount'>Total: $${totalAmount}$</p>
+    </div>
+</div>
+
+

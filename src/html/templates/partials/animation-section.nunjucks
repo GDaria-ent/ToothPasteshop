@@ -1,0 +1,17 @@
+<div class='animation-section_wrapper'>
+    <div class='animation-section_description-container'>
+        <h3 class='animation-section_name'>No plastic ever</h3>
+        <p class='animation-section_description'>We’ve delivered millions of smiles without a single plastic tube entering a landfill.</p>
+    </div>
+    <div class='animated-image-container'>
+        <img class='animated-image animated-bottle--first' src='/assets/animation-bottle.png'>
+        <img class='animated-image animated-bottle--second' src='/assets/animation-bottle.png'>
+        <img class='animated-image animated-bottle--third' src='/assets/animation-bottle.png'>
+        <img class='animated-image animated-bottle--fourth' src='/assets/animation-bottle.png'>
+        <img class='animated-image animated-pill--first' src='/assets/pill1.png'>
+        <img class='animated-image animated-pill--second' src='/assets/pill2.png'>
+        <img class='animated-image animated-pill--third' src='/assets/pill5.png'>
+    </div>
+    
+    
+</div>

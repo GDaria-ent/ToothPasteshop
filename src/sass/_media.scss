@@ -1,0 +1,308 @@
+@media screen and (max-width: 1061px){
+    .product-card__image-wrapper{
+        height: 400px;
+    }
+    .product-card__image-wrapper-footer{
+        height: 165px;
+    }
+}
+
+@media screen and (max-width: 982px){
+    .header-navigation{
+        display: none;
+    }
+    .header-wrapper{
+        display: inline-block;
+    }
+    .logo-wrapper{
+        margin: 0 auto;
+        display: inline-block;
+        position: static;
+        left: 0;
+        width: 70px;
+    }
+    .button-section{
+        float: right;
+    }
+    .button-section__menu-button{
+        display: block;
+    }
+    h1{
+        font-size: 40px;
+    }
+    .jumbotron-description{
+        font-size: 19px;
+        line-height: 31px;
+    }
+    .subscription-section__title{
+        left: 20%;
+        font-size: 45px;
+    }
+    .subscription-section__description{
+        top: 50%;
+        left: 22%;
+    }
+    .jumbotron-footer{
+        flex-wrap: wrap;
+        padding: 12px 5px 12px 5px;
+
+    }
+    .jumbotron-footer__image__wrapper{
+        margin-top: 15px;
+    }
+    .video-section__wrapper{
+        flex-wrap: wrap;  
+    }
+    .video_wrapper{
+        max-width: none;
+        width: 100%;
+        margin: 0 0 10px 0;
+        min-height: 500px;
+    }
+    .swiper2{
+        width: 100%;
+        max-width: none;
+    }
+    .gif-section__description-container{
+        flex-wrap: wrap;
+    }
+    .gif-section__wrapper{
+        margin-top: 30px;
+    }
+    .gif-section__description-content{
+        max-width: none;
+    }
+    .gif-section__description{
+        margin-top: 15px;
+    }
+    .gif-section__gif-container{
+        width: 100%;
+    }
+}
+
+
+
+@media  screen and (max-width: 876px){
+    .slider-button-wrapper{
+        display: none;
+    }
+    .page-description-slider{
+        width: 100%;
+    }
+    .animated-bottle--second{
+        display: none;
+    }
+    .product-card__wrapper{
+        max-width: calc((100% - 15px)/2);
+    }
+    .product-card__image-wrapper{
+        height: 300px;
+    }
+    .product-card__wrapper-footer{
+        max-width: calc((100% - 15px)/3);
+    }
+    .subscription-section__top-part{
+        display: none;
+    }
+    .subscription-section__title{
+        position: static;
+        max-width: 509px;
+        width: 100%;
+        font-size: 35px;
+        line-height: 33px;
+        margin: 0 auto;
+    }
+    .subscription-section__description{
+        position: static;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 22px;
+        padding-bottom: 20px;
+    }
+    .subscription-section__button{
+        position: static; 
+        width: 200px;
+        padding: 10px 55px;
+        font-size: 15px;
+        line-height: 21px;
+    }
+    .subscription-section__middle-part{
+        padding-top: 70px;
+    }
+    .subscription-section__bottom-part{
+        height: 90px;
+    }
+    .pre-footer{
+        flex-wrap: wrap;
+    }
+}
+
+@media  screen and (max-width: 600px){
+    .top-description{
+        font-size: 16px;
+        line-height: 21px;
+    }
+    .gif-section__gif-container{
+        height: 300px;
+    }
+    .gif-section__name{
+        font-size: 39px;
+        line-height: 41px;
+        letter-spacing: 1;
+    }
+    .gif-section__description{
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .product-card__wrapper-footer{
+        max-width: calc((100% - 15px)/2);
+    }
+    .page-footer__column-container{
+        flex-wrap: wrap;
+    }
+    .page-footer__column-item{
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .page-footer__column-name{
+        font-size: 18px;
+    }
+    .video-modal__close-button{
+        top: 0;
+    }
+    
+}
+@media  screen and (max-width: 495px){
+    .page-description__footer__button-wrapper{
+        padding-top: 27px;
+    }
+    .page-description__footer__button-wrapper::before{
+        right: 1%;
+        bottom: 30%;
+    }
+    .page-description__footer__button-wrapper::after{
+        right: 1%;
+        bottom: 30%;
+    }
+    .swiper2-img-description{
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 700;
+    }
+    .swiper-prev2{
+        display: none;
+    }
+    .swiper-next2{
+        display: none;
+    }
+
+    .description-item--accent::before{
+        display: none;
+    }
+    .description-item--accent::after{
+        display: none;
+    }
+    .description-item{
+        font-size: 10px;
+    }
+    .description-item--accent{
+        max-width: 140px;
+        width: 100%;
+    }
+    .slider-section{
+        padding-top: 10px;
+    }
+    .animated-bottle--first{
+        display: none;
+    }
+    .animated-pill--first{
+        display: none;
+    }
+    .animation-section_name{
+        font-size: 31px;
+        line-height: 30px;
+        letter-spacing: 2px;
+        margin: none;
+    }
+    .animation-section_description{
+        font-size: 21px;
+        line-height: 27px;
+    }
+    .animation-section_wrapper{
+        margin-top: 30px;
+        height: 400px;
+        padding-top: 150px;
+    }
+
+    .product-card__wrapper{
+        max-width: none;
+    }
+    .subscription-section__title{
+        position: static;
+        max-width: 309px;
+        font-size: 19px;
+        line-height: 23px;
+        margin: 0 auto;
+    }
+    .subscription-section__description{
+        position: static;
+        font-size: 16px;
+        line-height: 21px;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 22px;
+        padding-bottom: 25px;
+    }
+    .video-modal__close-button{
+        top: 40px;
+    }
+    .cart__content-part{
+        padding: 20px 8px;
+    }
+    .content-part__card-content{
+        padding: 10px 10px 8px;
+    }
+}
+@media  screen and (max-width: 430px){
+    .gif-section__gif-container{
+        height: 200px;
+    }
+    .jumbotron-description{
+        font-size: 14px;
+    }
+    .product-card__wrapper-footer{
+        max-width: none;
+    }
+    .pre-footer__title{
+        font-size: 18px;
+        line-height: 10px;
+    }
+    .pre-footer__description{
+        line-height: 15px;
+        margin-top: 10px;
+    }
+    .pre-footer__item{
+        margin-bottom: 16px;
+    }
+    .pre-footer__item:last-child{
+        margin-bottom: 0;
+    }
+    .page-footer__column-container{
+        flex-direction: column;
+    }
+    .video-modal__close-button{
+        top: 60px;
+    }
+    .content-part__card-title{
+        font-size: 15px;
+    }
+    .content-part__card-description{
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .content-part__card-price{
+        font-size: 14px;
+    }
+}

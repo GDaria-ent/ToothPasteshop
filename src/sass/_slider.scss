@@ -1,0 +1,30 @@
+.swiper-container {
+    max-width: 1400px;
+    width: 100%;
+    height: 455px;   
+}
+
+.swiper-slide{
+    width: 350px;
+    height: 445px;
+    position: relative;
+    filter: brightness(90%);
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.slide-img{
+    position: absolute;
+    height: 100%;
+    transform: translate(-50%, -50%); 
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+
+

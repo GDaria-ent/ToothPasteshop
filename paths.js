@@ -15,7 +15,8 @@ let PATHS = {
         'src/css/**/*.css'
     ],
     sass: [
-        'src/sass/**/*.sass'
+        'src/sass/**/*.sass',
+        'src/sass/**/*.scss',
     ],
     copy: {
         source: [

@@ -1,0 +1,12 @@
+{% extends "base.nunjucks" %}
+
+{% set title = 'Test Page' %}
+
+{% block content %}
+    <div class='private-accont__wrapper'></div>
+    {% include '../templates/partials/private-account-header.nunjucks' %}
+    <div class='private-accont__content-part__wrapper'>
+        {% include '../templates/partials/private-account-content-part.nunjucks' %}
+    </div>
+
+{% endblock %}

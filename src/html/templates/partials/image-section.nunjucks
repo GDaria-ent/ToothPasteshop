@@ -1,0 +1,196 @@
+{% set top_cards = [
+    {
+        "sourse": '/assets/Product1.png',
+        "sourse2": '/assets/Charcoal-Subscription.jpg',
+        "sourse3": '/assets/Berry-Subscription.jpg',
+        "alt": 'Fresh Mint Bits',
+        'name': 'Fresh Mint',
+        'description': 'Toothpaste',
+        'rating': 'Rated 4.9 out of 5',
+        'reviews': '10,368 Reviews',
+        'price_per_piece': '$30',
+        'price_per_set': '$48',
+        'stars': '/assets/stars.png',
+        'color_data': [
+            ['Mint', '/assets/cian.png'],
+            ['Charcoal', '/assets/purple.png'],
+            ['Berry', '/assets/pink.png']
+        ]
+    },
+    {
+        "sourse": '/assets/Product2.png',
+        "alt": 'Fresh Mint Bits',
+        'name': 'Mouthwash Bits',
+        'description': '4-Month supply',
+        'rating': 'Rated 5.0 out of 5',
+        'reviews': '366 Reviews',
+        'price_per_piece': '$20',
+        'price_per_set': '$24',
+        'stars': '/assets/stars.png'
+    },
+    {
+        "sourse": '/assets/Product3.png',
+        "alt": 'Whitening Gel',
+        'name': 'Whitening Gel',
+        'description': 'One vial • 28 applications',
+        'rating': 'Rated 5.0 out of 5',
+        'reviews': '18 Reviews',
+        'price_per_piece': '$24',
+        'stars': '/assets/stars.png'
+    },
+    {
+        "sourse": '/assets/Product4.png',
+        "alt": 'Dental Floss',
+        'name': 'Dental Floss',
+        'description': 'Two-pack',
+        'rating': 'Rated 4.9 out of 5',
+        'reviews': '257 Reviews',
+        'price_per_piece': '$12',
+        'stars': '/assets/stars.png'
+    },
+    {
+        "sourse": '/assets/Product5.png',
+        "alt": 'Bamboo toothbrush',
+        'name': 'Bamboo Toothbrush',
+        'description': 'Two-pack',
+        'rating': 'Rated 4.9 out of 5',
+        'reviews': '962 Reviews',
+        'price_per_piece': '$12',
+        'stars': '/assets/stars.png'
+    },
+    {
+        "sourse": '/assets/Product6.png',
+        "alt": 'Daily Habits Kit',
+        'name': 'Daily Habits Kit',
+        'description': '5-Piece Oral Care Set',
+        'rating': 'Rated 4.9 out of 5',
+        'reviews': '16,144 Reviews',
+        'price_per_piece': '$60',
+        'price_per_set': '$84',
+        'stars': '/assets/stars.png'
+    }
+]%}
+{% set bottom_cards = [
+    {
+        "sourse": '/assets/Product7.png',
+        "alt": 'Fresh Mint Toothpaste',
+        'name': 'Fresh Mint',
+        'description': 'Toothpaste',
+        'rating': 'Rated 4.9 out of 5',
+        'reviews': '10,368 Reviews',
+        'price_per_piece': '$12',
+        'stars': '/assets/stars.png'
+    },
+    {
+        "sourse": '/assets/Product8.png',
+        "alt": 'Mint Charcoal Toothpaste',
+        'name': 'Mint Charcoal',
+        'description': 'Toothpaste',
+        'rating': 'Rated 4.8 out of 5',
+        'reviews': '6,318 Reviews',
+        'price_per_piece': '$12',
+        'stars': '/assets/stars.png'
+    },
+    {
+        "sourse": '/assets/Product9.png',
+        "alt": 'Berry Twist Toothpaste',
+        'name': 'Berry Twist',
+        'description': 'Toothpaste',
+        'rating': 'Rated 4.9 out of 5',
+        'reviews': '607 Reviews',
+        'price_per_piece': '$12',
+        'stars': '/assets/stars.png'
+    },
+    {
+        "sourse": '/assets/Product10.png',
+        "alt": 'The Duo Toothpaste',
+        'name': 'The Duo',
+        'description': 'Toothpaste',
+        'rating': 'Rated 4.8 out of 5',
+        'reviews': '5,752 Reviews',
+        'price_per_piece': '$20',
+        'stars': '/assets/stars.png'
+    }
+]%}
+
+<section class='image-section-container' id='shop'>
+    <div class='product-cards__container'>
+        {% for item in top_cards%}
+            <div class='product-card__wrapper'>
+                    <div class='product-card__image-wrapper'>
+                        <img class='product-card__image product-card__image1' src= '{{item.sourse}}' alt='{{item.alt}}'>
+                        {% if(item.color_data) %}
+                            <img class='product-card__image product-card__image2' src= '{{item.sourse2}}' alt='{{item.alt}}'>
+                            <img class='product-card__image product-card__image3' src= '{{item.sourse3}}' alt='{{item.alt}}'>
+                        {% endif %}
+                    </div>   
+                <div class='product-card__description-container'>
+                    <div class='product-card__description-header'>
+                        <h2 class='product-card__title'>{{item.name}}</h2>
+                        {% if(item.price_per_set) %}
+                            <p class='product-card__header-price' style='color:#0038D2;'>{{item.price_per_piece}}</p>
+                        {% else %} 
+                            <p class='product-card__header-price'>{{item.price_per_piece}}</p>   
+                        {% endif %}
+                    </div>
+                    <div class='product-card__content'>
+                        <p class='product-card__content-description'>{{item.description}}</p>
+                        <p class='product-card__content-price'>{{item.price_per_set}}</p>
+                    </div>
+                    <div class='product-card__info'>
+                        <p>{{item.rating}}</p>
+                        <p>{{item.reviews}}</p>
+                     </div>
+                    {% if(item.color_data) %}
+                        <div class='product-card__select'>
+                            {% for color, link, name in item.color_data %}
+                                <button class='product-card__select-colors product-card__select-colors--{{color}}'><img class='product-card__select-img' src='{{link}}' alt='{{color}}' title={{color}}></button>
+                            {% endfor %}  
+                        </div>
+                    {% endif %}
+                    <div class='product-card__footer'>
+                        <img class='product-card__footer-image' src='{{item.stars}}'>
+                    </div>
+                </div>
+            </div>
+                
+        {% endfor %}
+    
+    </div>
+    <div class='product-cards__footer-container'>
+        {% for card in bottom_cards %}
+            <div class='product-card__wrapper-footer'>
+                    <div class='product-card__image-wrapper-footer'>
+                        <img class='product-card__image-footer product-card__image-footer1' src= '{{card.sourse}}' alt='{{card.alt}}'>
+                        {% if(card.color_data) %}
+                            <img class='product-card__image-footer product-card__image-footer2' src= '{{card.sourse2}}' alt='{{card.alt}}'>
+                            <img class='product-card__image-footer product-card__image-footer3' src= '{{card.sourse3}}' alt='{{card.alt}}'>
+                        {% endif %}
+                    </div>
+                <div class='product-card__description-container'>
+                    <div class='product-card__description-header'>
+                        <h2 class='product-card__title'>{{card.name}}</h2>
+                        <p class='product-card__header-price'>{{card.price_per_piece}}</p>   
+                    </div>
+                    <div class='product-card__content'>
+                        <p class='product-card__content-description'>{{card.description}}</p>
+                    </div>
+                    <div class='product-card__info'>
+                        <p>{{card.rating}}</p>
+                        <p>{{card.reviews}}</p>
+                    </div>
+                    {% if(card.color_data) %}
+                        <div class='product-card__select'>
+                            {% for color, link in card.color_data %}
+                                <button class='product-card__select-colors product-card__select-colors--{{color}}'><img class='product-card__select-img' src='{{link}}' alt='{{color}}' title={{color}}></button>
+                            {% endfor %}  
+                        </div>
+                    {% endif %}
+                    <div class='product-card__footer'>
+                        <img class='product-card__footer-image' src='{{card.stars}}'>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>

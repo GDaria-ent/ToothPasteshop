@@ -1,0 +1,11 @@
+@keyframes change-colors {
+    from {background-color: #ae9ce6;}
+    50% {background-color: #afe7f6;}
+    to {background-color: #ae9ce6;}
+}
+
+@keyframes change-colors-transparent {
+    from {background-color: #ae9ce683;}
+    50% {background-color: #afe7f696;}
+    to {background-color: #cec1f383;}
+}

@@ -1,0 +1,69 @@
+.video-section__wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.video_wrapper{
+    max-width: 600px;
+    width: 100%;
+    padding: 0 5px 64px;
+    background-image: url(/assets/video.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    // background-position: center;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    margin-right: 10px;
+}
+.button-description{
+    font-size: 28px;
+    color: #FFF;
+    letter-spacing: 1.5px;
+    line-height: 29px;
+    font-weight: 400;
+}
+
+.swiper2 {
+    max-width: 770px;
+    width: 100%;
+    border-radius: 20px;
+    animation: change-colors 8s infinite ease-out;
+    margin: 0;
+}
+
+.video-section_swiper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-slide__description-wrapper{
+    max-width: 465px;
+    width: 100%;
+    text-align: center;
+}
+
+.swiper2-img-description{
+    font-size: 33px;
+    font-weight: 400;
+    line-height: 42px;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+
+.swiper2-img{
+    width: 100px;
+}
+.swiper2-img--accent{
+    width: 400px;
+}
+
+
+.swiper-pagination-bullet{
+    background-color: #000000;
+}

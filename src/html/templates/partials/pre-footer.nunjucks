@@ -1,0 +1,24 @@
+
+<div class='pre-footer'>
+    <div class='pre-footer__item'>
+        <div class='pre-footer__image-wrapper pre-footer__image--accent1'>
+            <img class='pre-footer__image' src='/assets/icon1.png'>
+        </div>
+        <span class='pre-footer__title pre-footer__title--accent'>Choose your flavor</span>
+        <span class='pre-footer__description'>Choose from Fresh Mint or Activated Charcoal with Fresh Mint.</span>
+    </div>
+    <div class='pre-footer__item'>
+        <div class='pre-footer__image-wrapper pre-footer__image--accent2'>
+            <img class='pre-footer__image' src='/assets/icon2.png'>
+        </div>
+        <span class='pre-footer__title pre-footer__title--accent'>Get a refill every 4 months</span>
+        <span class='pre-footer__description'>We send you fresh Bits every 4 months so you never run out of bits.</span>
+    </div>
+    <div class='pre-footer__item'>
+        <div class='pre-footer__image-wrapper pre-footer__image--accent3'>
+            <img class='pre-footer__image' src='/assets/icon3.png'>
+        </div>
+        <span class='pre-footer__title'>Pause or cancel anytime<span/>
+        <span class='pre-footer__description'>Going on vacation? You can adjust, postpone, or cancel your subscription at any time, hassle-free.</span>
+    </div>
+</div>

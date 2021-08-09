@@ -1,0 +1,39 @@
+html,
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: $rob;
+}
+    
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+    
+
+a {
+    text-decoration: none !important;
+    color: $violet;
+}
+  
+a:hover {
+    text-decoration: none !important;
+}
+button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: $rob;
+}
+
+.content-part{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+
+
+    

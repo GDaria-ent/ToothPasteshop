@@ -1,0 +1,22 @@
+<div class='gif-section__wrapper'>
+    <span class='gif-section__header'>How to</span>
+    <div class='gif-section__description-container'>
+        <div class='gif-section__description-content'>
+            <div class='gif-section__name'>
+              Easy as bite, brush, smile, repeat  
+            </div>
+            <div class='gif-section__description'>
+                <ol class='gif-section__description-list'>
+                    <li class='description-list__item'><strong>Bite</strong> down on your Bit</li>
+                    <li class='description-list__item'><strong>Brush</strong> with a wet toothbrush</li>
+                    <li class='description-list__item'><strong>Smile</strong> and watch it foam up like magic</li>
+                    <li class='description-list__item'><strong>Repeat</strong> twice a day, every day</li>
+                </ol>
+                <button class='gif-section__description-button'>Shop now</button>
+            </div>
+        </div>
+        <div class='gif-section__gif-container'>
+            <img class='gif-img' src='/assets/gif.gif'>
+        </div>
+    </div>
+</div>

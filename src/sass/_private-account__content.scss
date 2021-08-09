@@ -1,0 +1,34 @@
+.main-part{
+    width: 100%;
+    height: 100%;
+    padding: 50px 0;
+    text-align: center;
+    color: $violet;
+    text-transform: capitalize;
+    overflow-y: auto;
+}
+
+.main-part__title{
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.main-part__orders-description{
+    font-size: 18px;
+}
+
+.main-part__orders__total-price{
+    max-width: 350px;
+    width: 100%;
+    float: right;
+    text-align: right; 
+    background-color: $violet;
+    color: $white;
+    padding-right: 20px;
+    margin-top: 20px;
+}
+
+.total-price__amount{
+    font-weight: 700;
+}
+

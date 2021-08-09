@@ -1,0 +1,9 @@
+<section class='subscription-section'>
+    <div class='subscription-section__top-part'></div>
+    <div class='subscription-section__middle-part'>
+        <h3 class='subscription-section__title'>Better for your wallet, better for our planet</h3>
+        <p class='subscription-section__description'>Our subscription is the most eco-friendly and affordable way to kick the tube.</p>
+        <button class='subscription-section__button'>Get started</button>
+    </div>
+    <div class='subscription-section__bottom-part'></div>
+</section>

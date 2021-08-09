@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <title>Test Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+    <script>
+        !function(t,e){"function"==typeof define&&define.amd?define(e):"object"==typeof exports?module.exports=e():t.ActionController=e()}(this,function(){"use strict";function t(t,e){this.currentElement=null,this.actions=e||{},this.attr=t,this.events=["click","input","change"],this.checkers={},this.checker=this.checker.bind(this),this.init()}return t.prototype.$attr=function(t){return this.el.getAttribute(t)},t.prototype.$val=function(){return this.event.target.value},t.prototype.checkElement=function(t){return t.getAttribute(this.attr)?{link:t,name:t.getAttribute(this.attr)}:{link:t.closest("["+this.attr+"]"),name:t.closest("["+this.attr+"]")?t.closest("["+this.attr+"]").getAttribute(this.attr):null}},t.prototype.add=function(t){for(var e in t)t.hasOwnProperty(e)&&(this.actions[e]=t[e],this.actions[e].$attr=this.$attr.bind(this.actions[e]),this.actions[e].$val=this.$val.bind(this.actions[e]))},t.prototype.checker=function(t){var e=this,n=t||"click";return function(t){e.currentElement;var i=e.currentElement=e.checkElement(t.target),r=e.actions[i.name];if(!i||!r||(r.type||"click")!==n)return!1;r.event=t,r.el=i.link,r.name=i.name,r.action({event:t,el:i.link,name:i.name})}},t.prototype.setListeners=function(){var t=this;t.events.forEach(function(e){var n=t.checker(e);t.checkers[e+"controller"]={listener:n,event:e},document.addEventListener(e,t.checkers[e+"controller"].listener)})},t.prototype.removetListeners=function(){if(!this.checkers.length)return!1;this.checkers.forEach(function(t){document.addEventListener(t.event,t.listener)})},t.prototype.init=function(){this.removetListeners(),this.setListeners()},t});
+        var $controller$ = new ActionController('data-controller');
+    </script>
+    
+     
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="./css/shop-main.css">
+
+</head>
+<body>
+    
+         
+
+<header>
+    <div class='header-wrapper'>
+        <nav class ='header-navigation'>
+            <ul class = 'header-navigation__list'>
+                
+
+                    <li class='header-navigation__list-item'>
+                        <a href="#shop">shop</a>
+                    </li>
+
+                
+
+                    <li class='header-navigation__list-item'>
+                        <a href="#about">about us</a>
+                    </li>
+
+                
+            </ul>
+        </nav>
+        <div class='logo-wrapper'>
+            <a class='logo-wrapper__link' href='#'>
+                <svg width="70" height="30" viewBox="0 0 70 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M31.9167 0.248274C29.3333 0.786205 28.2083 4.2 29.8333 6.47586C30.6875 7.67586 32.9583 8.23448 34.5208 7.63448C36.3958 6.93103 37.375 4.46896 36.5625 2.52414C35.75 0.641377 34.0625 -0.186209 31.9167 0.248274Z" fill="#5326D4"/>
+                    <path d="M4.27083 0.620689C1.97917 0.703449 0.0833333 0.786207 0.0625 0.806896C0.0208333 0.806896 0 1.36552 0 2.04828V3.24828L1.16667 3.37241C2.625 3.51724 3.25 3.93104 3.52083 4.90345C3.66667 5.4 3.75 9.22759 3.75 15.1655C3.75 26.6276 3.83333 26.2552 1.27083 26.731L0 26.9793V28.2V29.4207L9.75 29.3172C17.9167 29.2552 19.6875 29.1724 20.7917 28.9035C23.5417 28.1793 25.4375 26.8138 26.3958 24.869C26.9167 23.8345 26.9792 23.4621 26.9792 21.8276C26.9583 18.1862 25.25 16.0759 21.2708 14.6897C19.5208 14.0897 19.0625 13.8621 19.6042 13.8621C20.3958 13.8621 23.2708 12.2069 24.1875 11.2345C25.3542 10.0138 25.7083 9.04138 25.6875 7.2C25.6875 4.88276 24.4583 2.95862 22.3333 1.88276C19.6667 0.537931 15.5833 0.248276 4.27083 0.620689ZM14.9792 3.53793C16.5417 4.13793 17.2708 5.6069 17.2917 8.06897C17.2917 11.2759 16.1875 12.4966 13.0417 12.7448L11.4583 12.8897V7.96552V3.04138L12.9375 3.18621C13.75 3.26897 14.6667 3.43448 14.9792 3.53793ZM16.0625 15.9931C16.9375 16.3448 17.7917 17.2966 18.1667 18.3517C18.5833 19.5517 18.5208 23.0483 18.0625 24.2483C17.3958 25.9655 15.75 26.8759 13.8958 26.6069C12.6875 26.4207 11.9375 25.8414 11.6667 24.869C11.5625 24.4552 11.4583 22.1586 11.4583 19.7793V15.4552L13.3958 15.5793C14.4583 15.6414 15.6667 15.8276 16.0625 15.9931Z" fill="#5326D4"/>
+                    <path d="M44.3125 6.35172C44.2292 6.41379 44.1667 6.62069 44.1667 6.80689C44.1667 7.44827 43.1667 9.26896 42.3959 10.0345C41.4167 10.9862 39.8542 11.731 38.3959 11.9172L37.2917 12.0414V13.2621V14.4828H38.5417H39.7917V20.2345C39.7917 26.9379 39.875 27.4345 41.375 28.7379C42.5834 29.7931 43.8125 30.0828 46.4375 29.9379C49.2709 29.7931 50.9792 28.9655 52.0834 27.1862L52.5417 26.4621L53.5417 27.3931C55.4375 29.1517 57.8334 30 60.9375 30C63.0625 30 64.5209 29.669 66.1875 28.8207C67.3959 28.2207 69.375 26.5448 69.375 26.1103C69.375 25.9655 68.9375 25.5931 68.3959 25.2621L67.4167 24.6414L66.4167 25.5724C65.1667 26.731 64.1667 27.1655 62.7084 27.1655C60.1042 27.1655 58.6459 25.4069 58.2292 21.6621L58.1042 20.4828H64.0417H70V19.6552C70 18.331 69.5834 16.7379 68.8959 15.4552C65.8334 9.68276 55.2709 9.86896 51.8125 15.7448C50.4792 18 50.25 21.7862 51.2917 24.3517L51.8125 25.6138L51.3125 25.4276C50.5417 25.1379 50.3125 25.2 50 25.7379C49.6459 26.4207 48.5209 26.9793 47.875 26.8345C46.9584 26.6069 46.875 26.0276 46.875 20.069V14.4828H49.4792H52.0834V13.2414V12H49.4792H46.875V9.10345V6.20689H45.6667C45 6.20689 44.375 6.26896 44.3125 6.35172ZM62.0625 14.3793C62.7292 14.9379 63.0209 15.6621 63.25 17.2138L63.375 18.2069H60.7292H58.0834L58.2292 17.1103C58.4375 15.7034 58.8959 14.5448 59.4375 14.1724C60.1459 13.6759 61.3334 13.7793 62.0625 14.3793Z" fill="#5326D4"/>
+                    <path d="M31.1459 12.0207C28.5209 12.4552 26.2917 12.8069 26.2084 12.8069C26.1042 12.8276 26.0417 13.3862 26.0417 14.069V15.3103H26.8542C29.125 15.3103 29.375 15.869 29.375 21.1034C29.375 26.3379 29.125 26.8966 26.8542 26.8966H26.0417V28.1379V29.3793H32.7084H39.375V28.1379V26.8966H38.6459C37.6875 26.8966 36.9792 26.5448 36.6875 25.9241C36.5417 25.5931 36.4584 23.0897 36.4584 18.3103C36.4584 12.7241 36.3959 11.1724 36.2084 11.1931C36.0625 11.2138 33.7917 11.5862 31.1459 12.0207Z" fill="#5326D4"/>
+                </svg>
+            </a>
+        </div>
+        <div class='button-section'>
+            <button class='basket'><svg width="17" height="25" viewBox="0 0 17 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M29.6227 3.65031C29.4693 3.43558 29.2239 3.31288 28.9479 3.31288H6.89264L6.24847 0.644172C6.15645 0.245399 5.81902 0 5.42025 0H1.52455C1.06442 0 0.665649 0.368098 0.665649 0.858896C0.665649 1.34969 1.06442 1.71779 1.52455 1.71779H4.7454L9.37731 20.8896C9.46933 21.2883 9.80675 21.5337 10.2055 21.5337H11.3405C10.8804 21.8712 10.543 22.4233 10.543 23.0675C10.543 24.1411 11.4018 25 12.4755 25C13.5491 25 14.408 24.1411 14.408 23.0675C14.408 22.4233 14.0706 21.9018 13.6104 21.5337H21.3712C20.911 21.8712 20.5736 22.4233 20.5736 23.0675C20.5736 24.1411 21.4325 25 22.5061 25C23.5798 25 24.4387 24.1411 24.4387 23.0675C24.4387 22.4233 24.1012 21.9018 23.6411 21.5337H24.1933C24.6534 21.5337 25.0522 21.1656 25.0522 20.6748C25.0522 20.2147 24.6534 19.816 24.1933 19.816H10.8804L10.3896 17.8221H25.8497C26.2485 17.8221 26.5859 17.546 26.6779 17.1779L29.7761 4.3865C29.8374 4.11043 29.7761 3.83436 29.6227 3.65031ZM15.4203 11.8405L15.1135 9.29448H20.0828L19.7761 11.8405H15.4203ZM19.5614 13.5583L19.2546 16.1043H15.911L15.6043 13.5583H19.5614ZM8.33436 9.29448H13.3957L13.7025 11.8405H8.94786L8.33436 9.29448ZM14.8988 7.57669L14.592 5.03067H20.5736L20.2669 7.57669H14.8988ZM12.8742 5.03067L13.181 7.57669H7.90491L7.29142 5.03067H12.8742ZM9.34663 13.5583H13.8865L14.1933 16.1043H9.96013L9.34663 13.5583ZM20.9724 16.1043L21.2791 13.5583H25.7884L25.1749 16.1043H20.9724ZM26.2178 11.8405H21.4939L21.8006 9.29448H26.8313L26.2178 11.8405ZM27.2301 7.57669H21.9847L22.2914 5.03067H27.8436L27.2301 7.57669Z" fill="#5326D4"/>
+                </svg>
+            </button>
+            <button class='user-account'><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 0C6.27 0 0 6.27 0 14C0 17.66 1.44 21.18 4 23.8C4.33 24.13 4.67 24.44 5.03 24.74C5.39 25.05 5.76 25.33 6.16 25.59C10.89 28.8 17.11 28.8 21.84 25.59C22.24 25.33 22.61 25.05 22.97 24.74C23.33 24.44 23.67 24.13 24 23.8C29.41 18.28 29.32 9.41 23.8 4C21.18 1.44 17.66 0 14 0ZM14 26C11.07 26.01 8.25 24.94 6.06 22.99C6.62 18.6 10.63 15.5 15.01 16.06C18.63 16.52 21.47 19.37 21.94 22.99C19.75 24.94 16.93 26.01 14 26ZM11 11C11 9.34 12.34 8 14 8C15.66 8 17 9.34 17 11C17 12.66 15.66 14 14 14C12.35 14 11 12.65 11 11ZM23.6 21.2C22.71 18.16 20.43 15.72 17.45 14.62C19.45 12.71 19.52 9.55 17.62 7.55C15.72 5.55 12.55 5.48 10.55 7.38C8.55 9.28 8.48 12.45 10.38 14.45C10.43 14.51 10.49 14.56 10.55 14.62C7.57 15.72 5.29 18.16 4.4 21.2C0.42 15.9 1.5 8.38 6.8 4.4C12.1 0.42 19.62 1.5 23.6 6.8C26.8 11.07 26.8 16.93 23.6 21.2Z" fill="#5326D4"/>
+                </svg>
+            </button>
+            <button class='button-section__menu-button'>
+                Menu
+            </button>
+        </div>
+        
+    </div>
+    
+
+</header>
+         
+
+
+<div class='jumbotron'>
+    <div class='jumbotron-content-wrapper'>
+        <h1>Toothpaste, reinvented</h1>
+        <p class='jumbotron-description'>The only plastic-free and clean way to replace<br> the paste you've used your whole life.</p>
+        <button class='jumbotron-button'>shop now</button>
+    </div>
+</div>
+<div class='jumbotron-footer'>
+    
+        <div class='jumbotron-footer__image-wrapper'>
+            <img class='jumbotron-footer__image' src= "/assets/img_1.png" alt = "As Seen On logo">
+        </div>
+    
+        <div class='jumbotron-footer__image-wrapper'>
+            <img class='jumbotron-footer__image' src= "/assets/img_2.png" alt = "Forbes logo">
+        </div>
+    
+        <div class='jumbotron-footer__image-wrapper'>
+            <img class='jumbotron-footer__image' src= "/assets/img_3.png" alt = "Oprah Magazine logo">
+        </div>
+    
+        <div class='jumbotron-footer__image-wrapper'>
+            <img class='jumbotron-footer__image' src= "/assets/img_4.png" alt = "Cosmopolitan logo">
+        </div>
+    
+        <div class='jumbotron-footer__image-wrapper'>
+            <img class='jumbotron-footer__image' src= "/assets/img_5.png" alt = "People logo">
+        </div>
+    
+        <div class='jumbotron-footer__image-wrapper'>
+            <img class='jumbotron-footer__image' src= "/assets/img_6.png" alt = "Buzz Feed logo">
+        </div>
+    
+        <div class='jumbotron-footer__image-wrapper'>
+            <img class='jumbotron-footer__image' src= "/assets/img_7.png" alt = "Womens Health logo">
+        </div>
+    
+        <div class='jumbotron-footer__image-wrapper'>
+            <img class='jumbotron-footer__image' src= "/assets/img_8.png" alt = "Now This logo">
+        </div>
+    
+        <div class='jumbotron-footer__image-wrapper'>
+            <img class='jumbotron-footer__image' src= "/assets/img_9.png" alt = "Insider logo">
+        </div>
+    
+        <div class='jumbotron-footer__image-wrapper'>
+            <img class='jumbotron-footer__image' src= "/assets/img_10.png" alt = "Country Living logo">
+        </div>
+    
+    
+</div>
+         <div class='content-part'>
+            <div class='page-description'>
+    <div class='head-description'>
+        <p class='top-description'>
+            We make your daily routine more sustainable with products that are plastic-free, cruelty-free and made with clean ingredients.
+        </p>
+        <div class='lower-description'>
+            <p class='description-item'>Plastic-free</p>
+            <p class='description-item description-item--accent'>Clean ingredients</p>
+            <p class='description-item'>Cruelty-free</p>
+        </div>
+    </div>
+    <div class='slider-section'>
+        <div class='slider-button-wrapper'>
+            <div class='slider-button_description-wrapper'>
+                <p class='slider-button-description'>Meet the future of oral care.</p>
+            </div>
+            <button class='slider-button'>Get started</button>
+        </div>
+        <div class='page-description-slider'>
+            <div class="swiper-container swiper1">
+               
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide swiper-slide--action">
+                        <img class='slide-img' src='/assets/Slider1.png'>
+                        <div class='description-wrapper'>
+                            <p class='slide-name'>Toothpaste Bits</p>
+                            <p class='slide-description'>From $7.50 / month</p>
+                        </div>  
+                    </div>
+                    <div class="swiper-slide swiper-slide--action">
+                        <img class='slide-img' src='/assets/Slider2.png'>
+                        <div class='description-wrapper'>
+                            <p class='slide-name'>Mouthwash Bits</p>
+                            <p class='slide-description'>From $5.00 / month</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide--action">
+                        <img class='slide-img' src='/assets/Slider3.png'>
+                        <div class='description-wrapper'>
+                            <p class='slide-name'>Whitening Gel</p>
+                            <p class='slide-description'>From $5.00 / month</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide--action">
+                        <img class='slide-img' src='/assets/Slider1.png'>
+                        <div class='description-wrapper'>
+                            <p class='slide-name'>Toothpaste Bits</p>
+                            <p class='slide-description'>From $7.50 / month</p>
+                        </div>  
+                    </div>
+                    <div class="swiper-slide swiper-slide--action">
+                        <img class='slide-img' src='/assets/Slider2.png'>
+                        <div class='description-wrapper'>
+                            <p class='slide-name'>Mouthwash Bits</p>
+                            <p class='slide-description'>From $5.00 / month</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide--action">
+                        <img class='slide-img' src='/assets/Slider3.png'>
+                        <div class='description-wrapper'>
+                            <p class='slide-name'>Whitening Gel</p>
+                            <p class='slide-description'>From $5.00 / month</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="swiper-button-prev swiper-button-prev1"></div>
+                <div class="swiper-button-next swiper-button-next1"></div>
+            </div>
+        </div>
+    </div>
+    <div class='page-description__footer__button-wrapper'>
+        <button class='page-description_footer-button'>Shop all products</button>
+    </div>
+    
+</div>
+
+
+            <div class='video-section__wrapper' id='about'>
+    <div class='video_wrapper'>
+        <h2 class='button-description'>Meet Lindsay and learn more about Bite</h2>
+        <button class='video-button'>learn more</buttton>
+    </div>
+    <div class='swiper-container swiper2'>
+        <div class="swiper-wrapper video-section_swiper-wrapper">
+            <div class="swiper-slide video-section_swiper">
+                <div class='swiper-slide__description-wrapper'>
+                    <img class='swiper2-img swiper2-img--accent' src='/assets/swiper1.png'>
+                    <p class='swiper2-img-description'>"The Most Creative People in Business 2020"</p>
+                </div>
+            </div>
+            <div class="swiper-slide video-section_swiper">
+                <div class='swiper-slide__description-wrapper'>
+                    <img class='swiper2-img' src='/assets/img_2.png'>
+                    <p class='swiper2-img-description'>"Bite Is Revolutionizing Toothpaste And The Oral Care Industry"</p>
+                </div>
+            </div>
+            <div class="swiper-slide video-section_swiper">
+                <div class='swiper-slide__description-wrapper'>
+                    <img class='swiper2-img' src='/assets/img_8.png'>
+                    <p class='swiper2-img-description'>"Stories People Cared About Most in 2019 -Number 1- Bite Toothpaste Bits"</p>
+                </div>
+            </div>
+            <div class="swiper-slide video-section_swiper">
+                <div class='swiper-slide__description-wrapper'>
+                    <img class='swiper2-img' src='/assets/img_6.png'>
+                    <p class='swiper2-img-description'>"like a breath of fresh air!"</p>
+                </div>
+            </div>
+            <div class="swiper-slide video-section_swiper">
+                <div class='swiper-slide__description-wrapper'>
+                    <img class='swiper2-img' src='/assets/img_3.png'>
+                    <p class='swiper2-img-description'>"Quit your tube of toothpaste and try these waste-free tablets"</p>
+                </div>
+            </div>
+            <div class="swiper-slide video-section_swiper">
+                <div class='swiper-slide__description-wrapper'>
+                    <img class='swiper2-img' src='/assets/img_4.png'>
+                    <p class='swiper2-img-description'>"These toothpaste tablets could replace the 1 billion toothpaste tubes we throw away annually."</p>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-prev swiper-prev2"></div>       
+        <div class="swiper-button-next swiper-next2"></div>
+
+        <div class="swiper-pagination"></div>  
+    </div>
+
+</div>
+
+            <div class='animation-section_wrapper'>
+    <div class='animation-section_description-container'>
+        <h3 class='animation-section_name'>No plastic ever</h3>
+        <p class='animation-section_description'>We’ve delivered millions of smiles without a single plastic tube entering a landfill.</p>
+    </div>
+    <div class='animated-image-container'>
+        <img class='animated-image animated-bottle--first' src='/assets/animation-bottle.png'>
+        <img class='animated-image animated-bottle--second' src='/assets/animation-bottle.png'>
+        <img class='animated-image animated-bottle--third' src='/assets/animation-bottle.png'>
+        <img class='animated-image animated-bottle--fourth' src='/assets/animation-bottle.png'>
+        <img class='animated-image animated-pill--first' src='/assets/pill1.png'>
+        <img class='animated-image animated-pill--second' src='/assets/pill2.png'>
+        <img class='animated-image animated-pill--third' src='/assets/pill5.png'>
+    </div>
+    
+    
+</div>
+
+            <div class='gif-section__wrapper'>
+    <span class='gif-section__header'>How to</span>
+    <div class='gif-section__description-container'>
+        <div class='gif-section__description-content'>
+            <div class='gif-section__name'>
+              Easy as bite, brush, smile, repeat  
+            </div>
+            <div class='gif-section__description'>
+                <ol class='gif-section__description-list'>
+                    <li class='description-list__item'><strong>Bite</strong> down on your Bit</li>
+                    <li class='description-list__item'><strong>Brush</strong> with a wet toothbrush</li>
+                    <li class='description-list__item'><strong>Smile</strong> and watch it foam up like magic</li>
+                    <li class='description-list__item'><strong>Repeat</strong> twice a day, every day</li>
+                </ol>
+                <button class='gif-section__description-button'>Shop now</button>
+            </div>
+        </div>
+        <div class='gif-section__gif-container'>
+            <img class='gif-img' src='/assets/gif.gif'>
+        </div>
+    </div>
+</div>
+
+            
+
+
+<section class='image-section-container' id='shop'>
+    <div class='product-cards__container'>
+        
+            <div class='product-card__wrapper'>
+                    <div class='product-card__image-wrapper'>
+                        <img class='product-card__image product-card__image1' src= '/assets/Product1.png' alt='Fresh Mint Bits'>
+                        
+                            <img class='product-card__image product-card__image2' src= '/assets/Charcoal-Subscription.jpg' alt='Fresh Mint Bits'>
+                            <img class='product-card__image product-card__image3' src= '/assets/Berry-Subscription.jpg' alt='Fresh Mint Bits'>
+                        
+                    </div>   
+                <div class='product-card__description-container'>
+                    <div class='product-card__description-header'>
+                        <h2 class='product-card__title'>Fresh Mint</h2>
+                        
+                            <p class='product-card__header-price' style='color:#0038D2;'>$30</p>
+                        
+                    </div>
+                    <div class='product-card__content'>
+                        <p class='product-card__content-description'>Toothpaste</p>
+                        <p class='product-card__content-price'>$48</p>
+                    </div>
+                    <div class='product-card__info'>
+                        <p>Rated 4.9 out of 5</p>
+                        <p>10,368 Reviews</p>
+                     </div>
+                    
+                        <div class='product-card__select'>
+                            
+                                <button class='product-card__select-colors product-card__select-colors--Mint'><img class='product-card__select-img' src='/assets/cian.png' alt='Mint' title=Mint></button>
+                            
+                                <button class='product-card__select-colors product-card__select-colors--Charcoal'><img class='product-card__select-img' src='/assets/purple.png' alt='Charcoal' title=Charcoal></button>
+                            
+                                <button class='product-card__select-colors product-card__select-colors--Berry'><img class='product-card__select-img' src='/assets/pink.png' alt='Berry' title=Berry></button>
+                              
+                        </div>
+                    
+                    <div class='product-card__footer'>
+                        <img class='product-card__footer-image' src='/assets/stars.png'>
+                    </div>
+                </div>
+            </div>
+                
+        
+            <div class='product-card__wrapper'>
+                    <div class='product-card__image-wrapper'>
+                        <img class='product-card__image product-card__image1' src= '/assets/Product2.png' alt='Fresh Mint Bits'>
+                        
+                    </div>   
+                <div class='product-card__description-container'>
+                    <div class='product-card__description-header'>
+                        <h2 class='product-card__title'>Mouthwash Bits</h2>
+                        
+                            <p class='product-card__header-price' style='color:#0038D2;'>$20</p>
+                        
+                    </div>
+                    <div class='product-card__content'>
+                        <p class='product-card__content-description'>4-Month supply</p>
+                        <p class='product-card__content-price'>$24</p>
+                    </div>
+                    <div class='product-card__info'>
+                        <p>Rated 5.0 out of 5</p>
+                        <p>366 Reviews</p>
+                     </div>
+                    
+                    <div class='product-card__footer'>
+                        <img class='product-card__footer-image' src='/assets/stars.png'>
+                    </div>
+                </div>
+            </div>
+                
+        
+            <div class='product-card__wrapper'>
+                    <div class='product-card__image-wrapper'>
+                        <img class='product-card__image product-card__image1' src= '/assets/Product3.png' alt='Whitening Gel'>
+                        
+                    </div>   
+                <div class='product-card__description-container'>
+                    <div class='product-card__description-header'>
+                        <h2 class='product-card__title'>Whitening Gel</h2>
+                         
+                            <p class='product-card__header-price'>$24</p>   
+                        
+                    </div>
+                    <div class='product-card__content'>
+                        <p class='product-card__content-description'>One vial • 28 applications</p>
+                        <p class='product-card__content-price'></p>
+                    </div>
+                    <div class='product-card__info'>
+                        <p>Rated 5.0 out of 5</p>
+                        <p>18 Reviews</p>
+                     </div>
+                    
+                    <div class='product-card__footer'>
+                        <img class='product-card__footer-image' src='/assets/stars.png'>
+                    </div>
+                </div>
+            </div>
+                
+        
+            <div class='product-card__wrapper'>
+                    <div class='product-card__image-wrapper'>
+                        <img class='product-card__image product-card__image1' src= '/assets/Product4.png' alt='Dental Floss'>
+                        
+                    </div>   
+                <div class='product-card__description-container'>
+                    <div class='product-card__description-header'>
+                        <h2 class='product-card__title'>Dental Floss</h2>
+                         
+                            <p class='product-card__header-price'>$12</p>   
+                        
+                    </div>
+                    <div class='product-card__content'>
+                        <p class='product-card__content-description'>Two-pack</p>
+                        <p class='product-card__content-price'></p>
+                    </div>
+                    <div class='product-card__info'>
+                        <p>Rated 4.9 out of 5</p>
+                        <p>257 Reviews</p>
+                     </div>
+                    
+                    <div class='product-card__footer'>
+                        <img class='product-card__footer-image' src='/assets/stars.png'>
+                    </div>
+                </div>
+            </div>
+                
+        
+            <div class='product-card__wrapper'>
+                    <div class='product-card__image-wrapper'>
+                        <img class='product-card__image product-card__image1' src= '/assets/Product5.png' alt='Bamboo toothbrush'>
+                        
+                    </div>   
+                <div class='product-card__description-container'>
+                    <div class='product-card__description-header'>
+                        <h2 class='product-card__title'>Bamboo Toothbrush</h2>
+                         
+                            <p class='product-card__header-price'>$12</p>   
+                        
+                    </div>
+                    <div class='product-card__content'>
+                        <p class='product-card__content-description'>Two-pack</p>
+                        <p class='product-card__content-price'></p>
+                    </div>
+                    <div class='product-card__info'>
+                        <p>Rated 4.9 out of 5</p>
+                        <p>962 Reviews</p>
+                     </div>
+                    
+                    <div class='product-card__footer'>
+                        <img class='product-card__footer-image' src='/assets/stars.png'>
+                    </div>
+                </div>
+            </div>
+                
+        
+            <div class='product-card__wrapper'>
+                    <div class='product-card__image-wrapper'>
+                        <img class='product-card__image product-card__image1' src= '/assets/Product6.png' alt='Daily Habits Kit'>
+                        
+                    </div>   
+                <div class='product-card__description-container'>
+                    <div class='product-card__description-header'>
+                        <h2 class='product-card__title'>Daily Habits Kit</h2>
+                        
+                            <p class='product-card__header-price' style='color:#0038D2;'>$60</p>
+                        
+                    </div>
+                    <div class='product-card__content'>
+                        <p class='product-card__content-description'>5-Piece Oral Care Set</p>
+                        <p class='product-card__content-price'>$84</p>
+                    </div>
+                    <div class='product-card__info'>
+                        <p>Rated 4.9 out of 5</p>
+                        <p>16,144 Reviews</p>
+                     </div>
+                    
+                    <div class='product-card__footer'>
+                        <img class='product-card__footer-image' src='/assets/stars.png'>
+                    </div>
+                </div>
+            </div>
+                
+        
+    
+    </div>
+    <div class='product-cards__footer-container'>
+        
+            <div class='product-card__wrapper-footer'>
+                    <div class='product-card__image-wrapper-footer'>
+                        <img class='product-card__image-footer product-card__image-footer1' src= '/assets/Product7.png' alt='Fresh Mint Toothpaste'>
+                        
+                    </div>
+                <div class='product-card__description-container'>
+                    <div class='product-card__description-header'>
+                        <h2 class='product-card__title'>Fresh Mint</h2>
+                        <p class='product-card__header-price'>$12</p>   
+                    </div>
+                    <div class='product-card__content'>
+                        <p class='product-card__content-description'>Toothpaste</p>
+                    </div>
+                    <div class='product-card__info'>
+                        <p>Rated 4.9 out of 5</p>
+                        <p>10,368 Reviews</p>
+                    </div>
+                    
+                    <div class='product-card__footer'>
+                        <img class='product-card__footer-image' src='/assets/stars.png'>
+                    </div>
+                </div>
+            </div>
+        
+            <div class='product-card__wrapper-footer'>
+                    <div class='product-card__image-wrapper-footer'>
+                        <img class='product-card__image-footer product-card__image-footer1' src= '/assets/Product8.png' alt='Mint Charcoal Toothpaste'>
+                        
+                    </div>
+                <div class='product-card__description-container'>
+                    <div class='product-card__description-header'>
+                        <h2 class='product-card__title'>Mint Charcoal</h2>
+                        <p class='product-card__header-price'>$12</p>   
+                    </div>
+                    <div class='product-card__content'>
+                        <p class='product-card__content-description'>Toothpaste</p>
+                    </div>
+                    <div class='product-card__info'>
+                        <p>Rated 4.8 out of 5</p>
+                        <p>6,318 Reviews</p>
+                    </div>
+                    
+                    <div class='product-card__footer'>
+                        <img class='product-card__footer-image' src='/assets/stars.png'>
+                    </div>
+                </div>
+            </div>
+        
+            <div class='product-card__wrapper-footer'>
+                    <div class='product-card__image-wrapper-footer'>
+                        <img class='product-card__image-footer product-card__image-footer1' src= '/assets/Product9.png' alt='Berry Twist Toothpaste'>
+                        
+                    </div>
+                <div class='product-card__description-container'>
+                    <div class='product-card__description-header'>
+                        <h2 class='product-card__title'>Berry Twist</h2>
+                        <p class='product-card__header-price'>$12</p>   
+                    </div>
+                    <div class='product-card__content'>
+                        <p class='product-card__content-description'>Toothpaste</p>
+                    </div>
+                    <div class='product-card__info'>
+                        <p>Rated 4.9 out of 5</p>
+                        <p>607 Reviews</p>
+                    </div>
+                    
+                    <div class='product-card__footer'>
+                        <img class='product-card__footer-image' src='/assets/stars.png'>
+                    </div>
+                </div>
+            </div>
+        
+            <div class='product-card__wrapper-footer'>
+                    <div class='product-card__image-wrapper-footer'>
+                        <img class='product-card__image-footer product-card__image-footer1' src= '/assets/Product10.png' alt='The Duo Toothpaste'>
+                        
+                    </div>
+                <div class='product-card__description-container'>
+                    <div class='product-card__description-header'>
+                        <h2 class='product-card__title'>The Duo</h2>
+                        <p class='product-card__header-price'>$20</p>   
+                    </div>
+                    <div class='product-card__content'>
+                        <p class='product-card__content-description'>Toothpaste</p>
+                    </div>
+                    <div class='product-card__info'>
+                        <p>Rated 4.8 out of 5</p>
+                        <p>5,752 Reviews</p>
+                    </div>
+                    
+                    <div class='product-card__footer'>
+                        <img class='product-card__footer-image' src='/assets/stars.png'>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+</section>
+            <section class='subscription-section'>
+    <div class='subscription-section__top-part'></div>
+    <div class='subscription-section__middle-part'>
+        <h3 class='subscription-section__title'>Better for your wallet, better for our planet</h3>
+        <p class='subscription-section__description'>Our subscription is the most eco-friendly and affordable way to kick the tube.</p>
+        <button class='subscription-section__button'>Get started</button>
+    </div>
+    <div class='subscription-section__bottom-part'></div>
+</section>
+            
+<div class='pre-footer'>
+    <div class='pre-footer__item'>
+        <div class='pre-footer__image-wrapper pre-footer__image--accent1'>
+            <img class='pre-footer__image' src='/assets/icon1.png'>
+        </div>
+        <span class='pre-footer__title pre-footer__title--accent'>Choose your flavor</span>
+        <span class='pre-footer__description'>Choose from Fresh Mint or Activated Charcoal with Fresh Mint.</span>
+    </div>
+    <div class='pre-footer__item'>
+        <div class='pre-footer__image-wrapper pre-footer__image--accent2'>
+            <img class='pre-footer__image' src='/assets/icon2.png'>
+        </div>
+        <span class='pre-footer__title pre-footer__title--accent'>Get a refill every 4 months</span>
+        <span class='pre-footer__description'>We send you fresh Bits every 4 months so you never run out of bits.</span>
+    </div>
+    <div class='pre-footer__item'>
+        <div class='pre-footer__image-wrapper pre-footer__image--accent3'>
+            <img class='pre-footer__image' src='/assets/icon3.png'>
+        </div>
+        <span class='pre-footer__title'>Pause or cancel anytime<span/>
+        <span class='pre-footer__description'>Going on vacation? You can adjust, postpone, or cancel your subscription at any time, hassle-free.</span>
+    </div>
+</div>
+         </div>
+         
+
+<footer class='page-footer'>
+    <div class='page-footer__logo'>
+        <svg width="70" height="30" viewBox="0 0 70 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M31.9167 0.248274C29.3333 0.786205 28.2083 4.2 29.8333 6.47586C30.6875 7.67586 32.9583 8.23448 34.5208 7.63448C36.3958 6.93103 37.375 4.46896 36.5625 2.52414C35.75 0.641377 34.0625 -0.186209 31.9167 0.248274Z" fill="#5326D4"/>
+            <path d="M4.27083 0.620689C1.97917 0.703449 0.0833333 0.786207 0.0625 0.806896C0.0208333 0.806896 0 1.36552 0 2.04828V3.24828L1.16667 3.37241C2.625 3.51724 3.25 3.93104 3.52083 4.90345C3.66667 5.4 3.75 9.22759 3.75 15.1655C3.75 26.6276 3.83333 26.2552 1.27083 26.731L0 26.9793V28.2V29.4207L9.75 29.3172C17.9167 29.2552 19.6875 29.1724 20.7917 28.9035C23.5417 28.1793 25.4375 26.8138 26.3958 24.869C26.9167 23.8345 26.9792 23.4621 26.9792 21.8276C26.9583 18.1862 25.25 16.0759 21.2708 14.6897C19.5208 14.0897 19.0625 13.8621 19.6042 13.8621C20.3958 13.8621 23.2708 12.2069 24.1875 11.2345C25.3542 10.0138 25.7083 9.04138 25.6875 7.2C25.6875 4.88276 24.4583 2.95862 22.3333 1.88276C19.6667 0.537931 15.5833 0.248276 4.27083 0.620689ZM14.9792 3.53793C16.5417 4.13793 17.2708 5.6069 17.2917 8.06897C17.2917 11.2759 16.1875 12.4966 13.0417 12.7448L11.4583 12.8897V7.96552V3.04138L12.9375 3.18621C13.75 3.26897 14.6667 3.43448 14.9792 3.53793ZM16.0625 15.9931C16.9375 16.3448 17.7917 17.2966 18.1667 18.3517C18.5833 19.5517 18.5208 23.0483 18.0625 24.2483C17.3958 25.9655 15.75 26.8759 13.8958 26.6069C12.6875 26.4207 11.9375 25.8414 11.6667 24.869C11.5625 24.4552 11.4583 22.1586 11.4583 19.7793V15.4552L13.3958 15.5793C14.4583 15.6414 15.6667 15.8276 16.0625 15.9931Z" fill="#5326D4"/>
+            <path d="M44.3125 6.35172C44.2292 6.41379 44.1667 6.62069 44.1667 6.80689C44.1667 7.44827 43.1667 9.26896 42.3959 10.0345C41.4167 10.9862 39.8542 11.731 38.3959 11.9172L37.2917 12.0414V13.2621V14.4828H38.5417H39.7917V20.2345C39.7917 26.9379 39.875 27.4345 41.375 28.7379C42.5834 29.7931 43.8125 30.0828 46.4375 29.9379C49.2709 29.7931 50.9792 28.9655 52.0834 27.1862L52.5417 26.4621L53.5417 27.3931C55.4375 29.1517 57.8334 30 60.9375 30C63.0625 30 64.5209 29.669 66.1875 28.8207C67.3959 28.2207 69.375 26.5448 69.375 26.1103C69.375 25.9655 68.9375 25.5931 68.3959 25.2621L67.4167 24.6414L66.4167 25.5724C65.1667 26.731 64.1667 27.1655 62.7084 27.1655C60.1042 27.1655 58.6459 25.4069 58.2292 21.6621L58.1042 20.4828H64.0417H70V19.6552C70 18.331 69.5834 16.7379 68.8959 15.4552C65.8334 9.68276 55.2709 9.86896 51.8125 15.7448C50.4792 18 50.25 21.7862 51.2917 24.3517L51.8125 25.6138L51.3125 25.4276C50.5417 25.1379 50.3125 25.2 50 25.7379C49.6459 26.4207 48.5209 26.9793 47.875 26.8345C46.9584 26.6069 46.875 26.0276 46.875 20.069V14.4828H49.4792H52.0834V13.2414V12H49.4792H46.875V9.10345V6.20689H45.6667C45 6.20689 44.375 6.26896 44.3125 6.35172ZM62.0625 14.3793C62.7292 14.9379 63.0209 15.6621 63.25 17.2138L63.375 18.2069H60.7292H58.0834L58.2292 17.1103C58.4375 15.7034 58.8959 14.5448 59.4375 14.1724C60.1459 13.6759 61.3334 13.7793 62.0625 14.3793Z" fill="#5326D4"/>
+            <path d="M31.1459 12.0207C28.5209 12.4552 26.2917 12.8069 26.2084 12.8069C26.1042 12.8276 26.0417 13.3862 26.0417 14.069V15.3103H26.8542C29.125 15.3103 29.375 15.869 29.375 21.1034C29.375 26.3379 29.125 26.8966 26.8542 26.8966H26.0417V28.1379V29.3793H32.7084H39.375V28.1379V26.8966H38.6459C37.6875 26.8966 36.9792 26.5448 36.6875 25.9241C36.5417 25.5931 36.4584 23.0897 36.4584 18.3103C36.4584 12.7241 36.3959 11.1724 36.2084 11.1931C36.0625 11.2138 33.7917 11.5862 31.1459 12.0207Z" fill="#5326D4"/>
+        </svg>
+    </div>
+    <div class='page-footer__column-container'>
+        
+            <div class='page-footer__column'>
+                <span class='page-footer__column-name'>Single Bottles</span>
+                
+                    <a class='page-footer__column-item' href='#shop'>Fresh Mint</a>
+                
+                    <a class='page-footer__column-item' href='#shop'>The Berry Twist</a>
+                
+                    <a class='page-footer__column-item' href='#shop'>Mint with Activated Charcoal</a>
+                
+                    <a class='page-footer__column-item' href='#shop'>The Duo</a>
+                
+            </div>
+    
+            <div class='page-footer__column'>
+                <span class='page-footer__column-name'>Essentials</span>
+                
+                    <a class='page-footer__column-item' href='#shop'>The Fresh Mint Club</a>
+                
+                    <a class='page-footer__column-item' href='#shop'>The Mouthwash</a>
+                
+                    <a class='page-footer__column-item' href='#shop'>Floss, by bite</a>
+                
+                    <a class='page-footer__column-item' href='#shop'>The Duo</a>
+                
+            </div>
+    
+    </div>
+</footer>
+         <div class='sign-in-modal'>
+    <div class='sign-in-modal__wrapper'>
+        <button class='sign-in-modal__close-button'>
+            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.75 2.27861C18.8177 2.34439 18.8715 2.42314 18.9082 2.51016C18.945 2.59719 18.9639 2.69073 18.9639 2.78524C18.9639 2.87974 18.945 2.97328 18.9082 3.06031C18.8715 3.14734 18.8177 3.22608 18.75 3.29186L13.1192 9.0457C13.0516 9.11148 12.9977 9.19022 12.961 9.27725C12.9243 9.36428 12.9053 9.45782 12.9053 9.55232C12.9053 9.64683 12.9243 9.74037 12.961 9.8274C12.9977 9.91442 13.0516 9.99317 13.1192 10.0589L18.7861 15.7404C18.8538 15.8062 18.9076 15.8849 18.9443 15.972C18.9811 16.059 19 16.1525 19 16.247C19 16.3415 18.9811 16.4351 18.9443 16.5221C18.9076 16.6091 18.8538 16.6879 18.7861 16.7537L16.7287 18.7983C16.5887 18.928 16.405 19 16.2143 19C16.0237 19 15.84 18.928 15.7 18.7983L9.99703 13.1349C9.92986 13.0665 9.84979 13.0122 9.76149 12.9751C9.67319 12.9381 9.57841 12.919 9.48268 12.919C9.38695 12.919 9.29218 12.9381 9.20387 12.9751C9.11557 13.0122 9.0355 13.0665 8.96833 13.1349L3.30146 18.7802C3.16142 18.9099 2.97776 18.9819 2.78711 18.9819C2.59646 18.9819 2.4128 18.9099 2.27276 18.7802L0.215361 16.7537C0.147153 16.6863 0.0929863 16.606 0.0560134 16.5175C0.0190405 16.429 0 16.334 0 16.238C0 16.142 0.0190405 16.047 0.0560134 15.9585C0.0929863 15.8699 0.147153 15.7897 0.215361 15.7223L5.90028 10.0228C5.96849 9.95542 6.02266 9.87514 6.05963 9.78661C6.0966 9.69808 6.11564 9.60307 6.11564 9.50709C6.11564 9.41111 6.0966 9.31609 6.05963 9.22756C6.02266 9.13903 5.96849 9.05876 5.90028 8.99141L0.215361 3.30996C0.147153 3.24261 0.0929863 3.16234 0.0560134 3.07381C0.0190405 2.98528 0 2.89026 0 2.79428C0 2.69831 0.0190405 2.60329 0.0560134 2.51476C0.0929863 2.42623 0.147153 2.34595 0.215361 2.27861L2.29081 0.215916C2.35798 0.147532 2.43805 0.0932256 2.52635 0.0561576C2.61465 0.0190895 2.70943 0 2.80516 0C2.90089 0 2.99566 0.0190895 3.08397 0.0561576C3.17227 0.0932256 3.25234 0.147532 3.31951 0.215916L9.02247 5.89737C9.16252 6.02708 9.34617 6.09911 9.53682 6.09911C9.72748 6.09911 9.91113 6.02708 10.0512 5.89737L15.6639 0.234009C15.7311 0.165626 15.8111 0.111319 15.8994 0.0742514C15.9877 0.0371834 16.0825 0.0180938 16.1783 0.0180938C16.274 0.0180938 16.3688 0.0371834 16.4571 0.0742514C16.5454 0.111319 16.6254 0.165626 16.6926 0.234009L18.75 2.27861Z" fill="rgba(23, 35, 69, 1)"></path>
+            </svg>
+        </button>
+        <h2 class='sign-in-modal__header'>Welcome!</h2>
+        <p class='sign-in-modal__description'>Sign in to check or modify your order!</p>
+        <form class='sign-in-modal__form' action='' method='post'>
+            <label class='sign-in-modal__label'>
+                <input type='email' class='sign-in-modal__input sign-in-modal__input-email' placeholder='Your e-mail'>
+            </label>
+            <label class='sign-in-modal__label'>
+                <input type='password' class='sign-in-modal__input sign-in-modal__input-password' placeholder='Your password'>
+            </label>
+        </form>
+        <div class='sign-in-modal__buttons-wrapper'>
+            <button class='sign-in-modal__button'>Sign-in</button>
+                <span class='sign-in-modal__buttons-wrapper_item'>or</span>
+            <button class='sign-in-modal__button sign-in-modal__button--empty'>Create new account</button>
+        </div>
+    </div>
+
+</div>
+         <div class='menu-modal'>
+    <div class='menu-modal__wrapper'>
+        <button class='menu-modal__close-button'>
+            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.75 2.27861C18.8177 2.34439 18.8715 2.42314 18.9082 2.51016C18.945 2.59719 18.9639 2.69073 18.9639 2.78524C18.9639 2.87974 18.945 2.97328 18.9082 3.06031C18.8715 3.14734 18.8177 3.22608 18.75 3.29186L13.1192 9.0457C13.0516 9.11148 12.9977 9.19022 12.961 9.27725C12.9243 9.36428 12.9053 9.45782 12.9053 9.55232C12.9053 9.64683 12.9243 9.74037 12.961 9.8274C12.9977 9.91442 13.0516 9.99317 13.1192 10.0589L18.7861 15.7404C18.8538 15.8062 18.9076 15.8849 18.9443 15.972C18.9811 16.059 19 16.1525 19 16.247C19 16.3415 18.9811 16.4351 18.9443 16.5221C18.9076 16.6091 18.8538 16.6879 18.7861 16.7537L16.7287 18.7983C16.5887 18.928 16.405 19 16.2143 19C16.0237 19 15.84 18.928 15.7 18.7983L9.99703 13.1349C9.92986 13.0665 9.84979 13.0122 9.76149 12.9751C9.67319 12.9381 9.57841 12.919 9.48268 12.919C9.38695 12.919 9.29218 12.9381 9.20387 12.9751C9.11557 13.0122 9.0355 13.0665 8.96833 13.1349L3.30146 18.7802C3.16142 18.9099 2.97776 18.9819 2.78711 18.9819C2.59646 18.9819 2.4128 18.9099 2.27276 18.7802L0.215361 16.7537C0.147153 16.6863 0.0929863 16.606 0.0560134 16.5175C0.0190405 16.429 0 16.334 0 16.238C0 16.142 0.0190405 16.047 0.0560134 15.9585C0.0929863 15.8699 0.147153 15.7897 0.215361 15.7223L5.90028 10.0228C5.96849 9.95542 6.02266 9.87514 6.05963 9.78661C6.0966 9.69808 6.11564 9.60307 6.11564 9.50709C6.11564 9.41111 6.0966 9.31609 6.05963 9.22756C6.02266 9.13903 5.96849 9.05876 5.90028 8.99141L0.215361 3.30996C0.147153 3.24261 0.0929863 3.16234 0.0560134 3.07381C0.0190405 2.98528 0 2.89026 0 2.79428C0 2.69831 0.0190405 2.60329 0.0560134 2.51476C0.0929863 2.42623 0.147153 2.34595 0.215361 2.27861L2.29081 0.215916C2.35798 0.147532 2.43805 0.0932256 2.52635 0.0561576C2.61465 0.0190895 2.70943 0 2.80516 0C2.90089 0 2.99566 0.0190895 3.08397 0.0561576C3.17227 0.0932256 3.25234 0.147532 3.31951 0.215916L9.02247 5.89737C9.16252 6.02708 9.34617 6.09911 9.53682 6.09911C9.72748 6.09911 9.91113 6.02708 10.0512 5.89737L15.6639 0.234009C15.7311 0.165626 15.8111 0.111319 15.8994 0.0742514C15.9877 0.0371834 16.0825 0.0180938 16.1783 0.0180938C16.274 0.0180938 16.3688 0.0371834 16.4571 0.0742514C16.5454 0.111319 16.6254 0.165626 16.6926 0.234009L18.75 2.27861Z" fill="rgba(83, 38, 212, 1)"></path>
+            </svg>
+        </button>
+        <div class='menu-modal__item'>
+            <a class='menu-modal__item-link' href='#shop'>
+                shop
+            </a>
+        </div>
+        <div class='menu-modal__item'>
+            <a class='menu-modal__item-link' href='#about'>
+                about us
+            </a>
+        </div>
+    </div>
+</div>
+         <div class='video-modal'>
+    <div class='video-modal__wrapper'>
+        <button class='video-modal__close-button'>
+            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.75 2.27861C18.8177 2.34439 18.8715 2.42314 18.9082 2.51016C18.945 2.59719 18.9639 2.69073 18.9639 2.78524C18.9639 2.87974 18.945 2.97328 18.9082 3.06031C18.8715 3.14734 18.8177 3.22608 18.75 3.29186L13.1192 9.0457C13.0516 9.11148 12.9977 9.19022 12.961 9.27725C12.9243 9.36428 12.9053 9.45782 12.9053 9.55232C12.9053 9.64683 12.9243 9.74037 12.961 9.8274C12.9977 9.91442 13.0516 9.99317 13.1192 10.0589L18.7861 15.7404C18.8538 15.8062 18.9076 15.8849 18.9443 15.972C18.9811 16.059 19 16.1525 19 16.247C19 16.3415 18.9811 16.4351 18.9443 16.5221C18.9076 16.6091 18.8538 16.6879 18.7861 16.7537L16.7287 18.7983C16.5887 18.928 16.405 19 16.2143 19C16.0237 19 15.84 18.928 15.7 18.7983L9.99703 13.1349C9.92986 13.0665 9.84979 13.0122 9.76149 12.9751C9.67319 12.9381 9.57841 12.919 9.48268 12.919C9.38695 12.919 9.29218 12.9381 9.20387 12.9751C9.11557 13.0122 9.0355 13.0665 8.96833 13.1349L3.30146 18.7802C3.16142 18.9099 2.97776 18.9819 2.78711 18.9819C2.59646 18.9819 2.4128 18.9099 2.27276 18.7802L0.215361 16.7537C0.147153 16.6863 0.0929863 16.606 0.0560134 16.5175C0.0190405 16.429 0 16.334 0 16.238C0 16.142 0.0190405 16.047 0.0560134 15.9585C0.0929863 15.8699 0.147153 15.7897 0.215361 15.7223L5.90028 10.0228C5.96849 9.95542 6.02266 9.87514 6.05963 9.78661C6.0966 9.69808 6.11564 9.60307 6.11564 9.50709C6.11564 9.41111 6.0966 9.31609 6.05963 9.22756C6.02266 9.13903 5.96849 9.05876 5.90028 8.99141L0.215361 3.30996C0.147153 3.24261 0.0929863 3.16234 0.0560134 3.07381C0.0190405 2.98528 0 2.89026 0 2.79428C0 2.69831 0.0190405 2.60329 0.0560134 2.51476C0.0929863 2.42623 0.147153 2.34595 0.215361 2.27861L2.29081 0.215916C2.35798 0.147532 2.43805 0.0932256 2.52635 0.0561576C2.61465 0.0190895 2.70943 0 2.80516 0C2.90089 0 2.99566 0.0190895 3.08397 0.0561576C3.17227 0.0932256 3.25234 0.147532 3.31951 0.215916L9.02247 5.89737C9.16252 6.02708 9.34617 6.09911 9.53682 6.09911C9.72748 6.09911 9.91113 6.02708 10.0512 5.89737L15.6639 0.234009C15.7311 0.165626 15.8111 0.111319 15.8994 0.0742514C15.9877 0.0371834 16.0825 0.0180938 16.1783 0.0180938C16.274 0.0180938 16.3688 0.0371834 16.4571 0.0742514C16.5454 0.111319 16.6254 0.165626 16.6926 0.234009L18.75 2.27861Z" fill="rgba(83, 38, 212, 1)"></path>
+            </svg>
+        </button>
+        
+        <iframe class='video-modal__video' src="https://player.vimeo.com/video/396116328?title=0&amp;byline=0&amp;portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="allowfullscreen" style='width: 100%; height:384px;'></iframe>
+    </div>
+</div> 
+         <div class='create-account'>
+    <div class='create-account__wrapper'>
+        <button class='create-account__close-button'>
+            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.75 2.27861C18.8177 2.34439 18.8715 2.42314 18.9082 2.51016C18.945 2.59719 18.9639 2.69073 18.9639 2.78524C18.9639 2.87974 18.945 2.97328 18.9082 3.06031C18.8715 3.14734 18.8177 3.22608 18.75 3.29186L13.1192 9.0457C13.0516 9.11148 12.9977 9.19022 12.961 9.27725C12.9243 9.36428 12.9053 9.45782 12.9053 9.55232C12.9053 9.64683 12.9243 9.74037 12.961 9.8274C12.9977 9.91442 13.0516 9.99317 13.1192 10.0589L18.7861 15.7404C18.8538 15.8062 18.9076 15.8849 18.9443 15.972C18.9811 16.059 19 16.1525 19 16.247C19 16.3415 18.9811 16.4351 18.9443 16.5221C18.9076 16.6091 18.8538 16.6879 18.7861 16.7537L16.7287 18.7983C16.5887 18.928 16.405 19 16.2143 19C16.0237 19 15.84 18.928 15.7 18.7983L9.99703 13.1349C9.92986 13.0665 9.84979 13.0122 9.76149 12.9751C9.67319 12.9381 9.57841 12.919 9.48268 12.919C9.38695 12.919 9.29218 12.9381 9.20387 12.9751C9.11557 13.0122 9.0355 13.0665 8.96833 13.1349L3.30146 18.7802C3.16142 18.9099 2.97776 18.9819 2.78711 18.9819C2.59646 18.9819 2.4128 18.9099 2.27276 18.7802L0.215361 16.7537C0.147153 16.6863 0.0929863 16.606 0.0560134 16.5175C0.0190405 16.429 0 16.334 0 16.238C0 16.142 0.0190405 16.047 0.0560134 15.9585C0.0929863 15.8699 0.147153 15.7897 0.215361 15.7223L5.90028 10.0228C5.96849 9.95542 6.02266 9.87514 6.05963 9.78661C6.0966 9.69808 6.11564 9.60307 6.11564 9.50709C6.11564 9.41111 6.0966 9.31609 6.05963 9.22756C6.02266 9.13903 5.96849 9.05876 5.90028 8.99141L0.215361 3.30996C0.147153 3.24261 0.0929863 3.16234 0.0560134 3.07381C0.0190405 2.98528 0 2.89026 0 2.79428C0 2.69831 0.0190405 2.60329 0.0560134 2.51476C0.0929863 2.42623 0.147153 2.34595 0.215361 2.27861L2.29081 0.215916C2.35798 0.147532 2.43805 0.0932256 2.52635 0.0561576C2.61465 0.0190895 2.70943 0 2.80516 0C2.90089 0 2.99566 0.0190895 3.08397 0.0561576C3.17227 0.0932256 3.25234 0.147532 3.31951 0.215916L9.02247 5.89737C9.16252 6.02708 9.34617 6.09911 9.53682 6.09911C9.72748 6.09911 9.91113 6.02708 10.0512 5.89737L15.6639 0.234009C15.7311 0.165626 15.8111 0.111319 15.8994 0.0742514C15.9877 0.0371834 16.0825 0.0180938 16.1783 0.0180938C16.274 0.0180938 16.3688 0.0371834 16.4571 0.0742514C16.5454 0.111319 16.6254 0.165626 16.6926 0.234009L18.75 2.27861Z" fill="rgba(23, 35, 69, 1)"></path>
+            </svg>
+        </button>
+        <h2 class='create-account__header'>create account</h2>
+        <form class='create-account__form' action='' method='post'>
+            <label class='create-account__label'>
+                <input type='text' class='create-account__input create-account__input-name' placeholder='Name'>
+            </label>
+            <label class='create-account__label'>
+                <input type='text' class='create-account__input create-account__input-last-name' placeholder='Last Name'>
+            </label>
+            <label class='create-account__label'>
+                <input type='email' class='create-account__input create-account__input-email' placeholder='Your e-mail'>
+            </label>
+            <label class='create-account__label'>
+                <input type='password' class='create-account__input create-account__input-password' placeholder='Your password'>
+            </label>
+        </form>
+        <button class='create-account__submit-button'>Submit</button>
+    </div>
+
+</div>
+         <template id='page-card'>
+    <div class='product-item__container'>
+        <div class='product-item__image-wrapper'>
+            <img class='product-item__image' :src='src'>
+        </div>
+        <div class='product-item__card-content'>
+            <div class='product-item__card-content__wrapper'>
+                <h3 class='product-item__card-title'>${title}$</h3>
+                <p class='product-item__card-description'>${description}$</p>
+                <p class='product-item__card-price'>$${price}$</p>
+            </div>
+            <button class='product-item__button'
+                    @click='addCard'
+            >Add</button>        
+        </div>
+    </div>
+</template>
+
+<template id='item-in-cart'>
+    <div class='basket-item__wrapper'>
+        <button class='basket-item__close-button' @click='deleteItem'>
+            <svg class='basket-item__close-button__svg' viewBox="0 0 19 19" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.75 2.27861C18.8177 2.34439 18.8715 2.42314 18.9082 2.51016C18.945 2.59719 18.9639 2.69073 18.9639 2.78524C18.9639 2.87974 18.945 2.97328 18.9082 3.06031C18.8715 3.14734 18.8177 3.22608 18.75 3.29186L13.1192 9.0457C13.0516 9.11148 12.9977 9.19022 12.961 9.27725C12.9243 9.36428 12.9053 9.45782 12.9053 9.55232C12.9053 9.64683 12.9243 9.74037 12.961 9.8274C12.9977 9.91442 13.0516 9.99317 13.1192 10.0589L18.7861 15.7404C18.8538 15.8062 18.9076 15.8849 18.9443 15.972C18.9811 16.059 19 16.1525 19 16.247C19 16.3415 18.9811 16.4351 18.9443 16.5221C18.9076 16.6091 18.8538 16.6879 18.7861 16.7537L16.7287 18.7983C16.5887 18.928 16.405 19 16.2143 19C16.0237 19 15.84 18.928 15.7 18.7983L9.99703 13.1349C9.92986 13.0665 9.84979 13.0122 9.76149 12.9751C9.67319 12.9381 9.57841 12.919 9.48268 12.919C9.38695 12.919 9.29218 12.9381 9.20387 12.9751C9.11557 13.0122 9.0355 13.0665 8.96833 13.1349L3.30146 18.7802C3.16142 18.9099 2.97776 18.9819 2.78711 18.9819C2.59646 18.9819 2.4128 18.9099 2.27276 18.7802L0.215361 16.7537C0.147153 16.6863 0.0929863 16.606 0.0560134 16.5175C0.0190405 16.429 0 16.334 0 16.238C0 16.142 0.0190405 16.047 0.0560134 15.9585C0.0929863 15.8699 0.147153 15.7897 0.215361 15.7223L5.90028 10.0228C5.96849 9.95542 6.02266 9.87514 6.05963 9.78661C6.0966 9.69808 6.11564 9.60307 6.11564 9.50709C6.11564 9.41111 6.0966 9.31609 6.05963 9.22756C6.02266 9.13903 5.96849 9.05876 5.90028 8.99141L0.215361 3.30996C0.147153 3.24261 0.0929863 3.16234 0.0560134 3.07381C0.0190405 2.98528 0 2.89026 0 2.79428C0 2.69831 0.0190405 2.60329 0.0560134 2.51476C0.0929863 2.42623 0.147153 2.34595 0.215361 2.27861L2.29081 0.215916C2.35798 0.147532 2.43805 0.0932256 2.52635 0.0561576C2.61465 0.0190895 2.70943 0 2.80516 0C2.90089 0 2.99566 0.0190895 3.08397 0.0561576C3.17227 0.0932256 3.25234 0.147532 3.31951 0.215916L9.02247 5.89737C9.16252 6.02708 9.34617 6.09911 9.53682 6.09911C9.72748 6.09911 9.91113 6.02708 10.0512 5.89737L15.6639 0.234009C15.7311 0.165626 15.8111 0.111319 15.8994 0.0742514C15.9877 0.0371834 16.0825 0.0180938 16.1783 0.0180938C16.274 0.0180938 16.3688 0.0371834 16.4571 0.0742514C16.5454 0.111319 16.6254 0.165626 16.6926 0.234009L18.75 2.27861Z" fill="currentColor"></path>
+            </svg>
+        </button>
+        <div class='product-item__container'>
+            <div class='product-item__image-wrapper'>
+                <img class='product-item__image' :src='src'>
+            </div>
+            <div class='product-item__card-content product-item__card-content--basket'>
+                <div class='product-item__card-content__wrapper'>
+                    <h3 class='product-item__card-title'>${title}$</h3>
+                    <p class='product-item__card-description'>${description}$</p>
+                    <div class='basket-item__amount-button__wrapper'>
+                        <button class='basket-item__amount-button' @click='minusOneItem'>-</button>
+                        <div class='basket-item__counter'>${counter}$</div>
+                        <button class='basket-item__amount-button' @click='plusOneItem'>+</button>
+                    </div>
+                </div>
+                <div class='basket-item__total-price'>$${totalPrice}$</div>
+            </div>
+        </div>
+    </div>
+</template>
+
+
+<div class='cart' id='shopping-cart'>
+    <div class='cart__wrapper'>
+        <button class='cart__close-button'>
+            <svg class='close-button__svg' viewBox="0 0 256 512" fill='currentColor'>
+                <path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+            </svg>
+        My cart</button>
+        <div class='cart__content-part' id='app-wrapper'>
+            <h2 class='content-part__title'
+                v-if='ifCartIsEmpty'
+            >Your cart</h2>
+            <p class='content-part__description'
+                v-if='ifCartIsEmpty'
+            >Your cart is empty, give it some love!</p>
+            <button class='content-part__button'
+                    @click='openSignInWindow'
+                    v-if='!ifCartIsEmpty'>Check your order in Your Account!
+            </button>
+            <div class='basket__wrapper'>
+                <basket-item
+                    v-for='item in productsInCart'
+                    :key="item.title"
+                    :title="item.title"
+                    :description="item.description"
+                    :price='item.price'
+                    :src='item.image'
+                    :counter='item.counter'
+                    @click-to-delete='removeItemFormList(item)'
+                    @decrement-counter='deleteItem(item)'
+                    @increment-counter='addItem(item)'
+                ></basket-item>
+            </div>
+            <div class='content-part__card-wrapper'>
+                <card-item 
+                    v-for="product in products"
+                    :key="product.title"
+                    :title="product.title"
+                    :description="product.description"
+                    :price='product.price'
+                    :src='product.image'
+                    @add-card-to-local-storage='addItemToLocalStorage(product)'
+                ></card-item>
+            </div>
+        </div>
+    </div>
+</div>
+
+      
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="./js/vue.js"></script>
+<script src="./js/main.js"></script>
+<script src="./js/scroll-animation.js"></script>
+<script src="./js/cart.js"></script>
+<script src="./js/private-account.js"></script>
+
+
+
+
+
+
+   <script src="./js/modals.js"></script>
+   <script src="./js/image-section.js"></script>
+
+
+</body>
+</html>

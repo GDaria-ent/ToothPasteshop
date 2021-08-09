@@ -1,0 +1,71 @@
+.create-account{
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 99;
+    backdrop-filter: blur(5px);
+    padding: 50px 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease-out;
+}
+.create-account--visible{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.create-account__wrapper{
+    max-width: 470px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: $white;
+    color: $navy;
+    padding: 40px 32px 40px;
+    border-radius: 6px;
+    position: relative;
+}
+.create-account__close-button{
+    color: $violet;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.create-account__form{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.create-account__input{
+    width: 100%;
+    min-height: 40px;
+    border: 1px solid $inactive;
+    border-radius: 6px;
+    padding: 0 10px;
+    margin-top: 19px;
+}
+
+.create-account__header{
+    text-transform: capitalize;
+    color: $navy;
+}
+
+.create-account__submit-button{
+    background-color: $violet;
+    width: 100%;
+    color: $white;
+    border-radius: 7px;
+    padding: 10px 0 10px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.is-error{
+    border-color: red!important;
+}
