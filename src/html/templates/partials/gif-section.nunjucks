@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class='gif-section__gif-container'>
-            <img class='gif-img' src='/ToothPasteshop/assets/gif.gif'>
+            <img class='gif-img' src='/ToothPasteshop/assets/gif.gif' alt='a woman with toothpaste bits'>
         </div>
     </div>
 </div>

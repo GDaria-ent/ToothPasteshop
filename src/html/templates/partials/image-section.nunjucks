@@ -10,7 +10,7 @@
         'reviews': '10,368 Reviews',
         'price_per_piece': '$30',
         'price_per_set': '$48',
-        'stars': '/assets/stars.png',
+        'stars': '/ToothPasteshop/assets/stars.png',
         'color_data': [
             ['Mint', '/ToothPasteshop/assets/cian.png'],
             ['Charcoal', '/ToothPasteshop/assets/purple.png'],
@@ -149,7 +149,7 @@
                         </div>
                     {% endif %}
                     <div class='product-card__footer'>
-                        <img class='product-card__footer-image' src='{{item.stars}}'>
+                        <img class='product-card__footer-image' src='{{item.stars}}' alt='product rating'>
                     </div>
                 </div>
             </div>
@@ -187,7 +187,7 @@
                         </div>
                     {% endif %}
                     <div class='product-card__footer'>
-                        <img class='product-card__footer-image' src='{{card.stars}}'>
+                        <img class='product-card__footer-image' src='{{card.stars}}' alt='product rating'>
                     </div>
                 </div>
             </div>
