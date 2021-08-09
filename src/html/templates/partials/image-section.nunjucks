@@ -1,8 +1,8 @@
 {% set top_cards = [
     {
-        "sourse": '/assets/Product1.png',
-        "sourse2": '/assets/Charcoal-Subscription.jpg',
-        "sourse3": '/assets/Berry-Subscription.jpg',
+        "sourse": '/ToothPasteshop/assets/Product1.png',
+        "sourse2": '/ToothPasteshop/assets/Charcoal-Subscription.jpg',
+        "sourse3": '/ToothPasteshop/assets/Berry-Subscription.jpg',
         "alt": 'Fresh Mint Bits',
         'name': 'Fresh Mint',
         'description': 'Toothpaste',
@@ -12,13 +12,13 @@
         'price_per_set': '$48',
         'stars': '/assets/stars.png',
         'color_data': [
-            ['Mint', '/assets/cian.png'],
-            ['Charcoal', '/assets/purple.png'],
-            ['Berry', '/assets/pink.png']
+            ['Mint', '/ToothPasteshop/assets/cian.png'],
+            ['Charcoal', '/ToothPasteshop/assets/purple.png'],
+            ['Berry', '/ToothPasteshop/assets/pink.png']
         ]
     },
     {
-        "sourse": '/assets/Product2.png',
+        "sourse": '/ToothPasteshop/assets/Product2.png',
         "alt": 'Fresh Mint Bits',
         'name': 'Mouthwash Bits',
         'description': '4-Month supply',
@@ -26,27 +26,27 @@
         'reviews': '366 Reviews',
         'price_per_piece': '$20',
         'price_per_set': '$24',
-        'stars': '/assets/stars.png'
+        'stars': '/ToothPasteshop/assets/stars.png'
     },
     {
-        "sourse": '/assets/Product3.png',
+        "sourse": '/ToothPasteshop/assets/Product3.png',
         "alt": 'Whitening Gel',
         'name': 'Whitening Gel',
         'description': 'One vial • 28 applications',
         'rating': 'Rated 5.0 out of 5',
         'reviews': '18 Reviews',
         'price_per_piece': '$24',
-        'stars': '/assets/stars.png'
+        'stars': '/ToothPasteshop/assets/stars.png'
     },
     {
-        "sourse": '/assets/Product4.png',
+        "sourse": '/ToothPasteshop/assets/Product4.png',
         "alt": 'Dental Floss',
         'name': 'Dental Floss',
         'description': 'Two-pack',
         'rating': 'Rated 4.9 out of 5',
         'reviews': '257 Reviews',
         'price_per_piece': '$12',
-        'stars': '/assets/stars.png'
+        'stars': '/ToothPasteshop/assets/stars.png'
     },
     {
         "sourse": '/assets/Product5.png',
@@ -56,10 +56,10 @@
         'rating': 'Rated 4.9 out of 5',
         'reviews': '962 Reviews',
         'price_per_piece': '$12',
-        'stars': '/assets/stars.png'
+        'stars': '/ToothPasteshop/assets/stars.png'
     },
     {
-        "sourse": '/assets/Product6.png',
+        "sourse": '/ToothPasteshop/assets/Product6.png',
         "alt": 'Daily Habits Kit',
         'name': 'Daily Habits Kit',
         'description': '5-Piece Oral Care Set',
@@ -67,49 +67,49 @@
         'reviews': '16,144 Reviews',
         'price_per_piece': '$60',
         'price_per_set': '$84',
-        'stars': '/assets/stars.png'
+        'stars': '/ToothPasteshop/assets/stars.png'
     }
 ]%}
 {% set bottom_cards = [
     {
-        "sourse": '/assets/Product7.png',
+        "sourse": '/ToothPasteshop/assets/Product7.png',
         "alt": 'Fresh Mint Toothpaste',
         'name': 'Fresh Mint',
         'description': 'Toothpaste',
         'rating': 'Rated 4.9 out of 5',
         'reviews': '10,368 Reviews',
         'price_per_piece': '$12',
-        'stars': '/assets/stars.png'
+        'stars': '/ToothPasteshop/assets/stars.png'
     },
     {
-        "sourse": '/assets/Product8.png',
+        "sourse": '/ToothPasteshop/assets/Product8.png',
         "alt": 'Mint Charcoal Toothpaste',
         'name': 'Mint Charcoal',
         'description': 'Toothpaste',
         'rating': 'Rated 4.8 out of 5',
         'reviews': '6,318 Reviews',
         'price_per_piece': '$12',
-        'stars': '/assets/stars.png'
+        'stars': '/ToothPasteshop/assets/stars.png'
     },
     {
-        "sourse": '/assets/Product9.png',
+        "sourse": '/ToothPasteshop/assets/Product9.png',
         "alt": 'Berry Twist Toothpaste',
         'name': 'Berry Twist',
         'description': 'Toothpaste',
         'rating': 'Rated 4.9 out of 5',
         'reviews': '607 Reviews',
         'price_per_piece': '$12',
-        'stars': '/assets/stars.png'
+        'stars': '/ToothPasteshop/assets/stars.png'
     },
     {
-        "sourse": '/assets/Product10.png',
+        "sourse": '/ToothPasteshop/assets/Product10.png',
         "alt": 'The Duo Toothpaste',
         'name': 'The Duo',
         'description': 'Toothpaste',
         'rating': 'Rated 4.8 out of 5',
         'reviews': '5,752 Reviews',
         'price_per_piece': '$20',
-        'stars': '/assets/stars.png'
+        'stars': '/ToothPasteshop/assets/stars.png'
     }
 ]%}
 
